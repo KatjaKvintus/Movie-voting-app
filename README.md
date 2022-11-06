@@ -1,6 +1,6 @@
-#Tämä on pääotsikko#
+# Tämä on pääotsikko
 
-##Tämä on aliotsikko##
+## Tämä on aliotsikko
 
 Tässä on tavallista tekstiä monta kertaa kopioituna. 
 Tässä on tavallista tekstiä monta kertaa kopioituna. 
