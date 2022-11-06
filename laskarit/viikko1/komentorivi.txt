@@ -1,0 +1,20 @@
+kurssit
+└── ot2022
+    └── viikko1
+        ├── 3
+        ├── file
+        ├── file1
+        ├── file2
+        ├── tiedostoja
+        └── unicafe
+            ├── poetry.lock
+            ├── pyproject.toml
+            └── src
+                ├── index.py
+                ├── kassapaate.py
+                ├── maksukortti.py
+                └── tests
+                    ├── __init__.py
+                    └── maksukortti_test.py
+
+6 directories, 11 files

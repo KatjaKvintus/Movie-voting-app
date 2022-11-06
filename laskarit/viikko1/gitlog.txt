@@ -1,0 +1,133 @@
+kvintus@lx1-fuxi054:~/ot_viikko1/tiedostoja$ git log --stat | cat
+commit faa4722291951e028c0e73329ac6f5324476835a
+Author: Katja <katja.kvintus@icloud.com>
+Date:   Sun Nov 6 11:08:21 2022 +0200
+
+    Muutoksia, tehtävä 11 vko 1
+
+ tiedostoja/{file1.txt => file22.txt} | 0
+ tiedostoja/file3.txt                 | 1 +
+ 2 files changed, 1 insertion(+)
+
+commit 97d0a20a0d369fe1a0ce7bef6f3b1f3672a34cd8
+Author: Katja <katja.kvintus@icloud.com>
+Date:   Sun Nov 6 10:47:33 2022 +0200
+
+    Luotu tiedostot file1, file2 ja file3
+
+ tiedostoja/file1.txt | 0
+ tiedostoja/file2.txt | 0
+ tiedostoja/file3.txt | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 155425b62c04398031872fd8f0e2ca5fcc2aecbf
+Author: Katja <katja.kvintus@icloud.com>
+Date:   Sat Nov 5 14:39:07 2022 +0200
+
+    Muokattu tiedostojen sisältöä tehtävän 9 mukaisesti
+
+ eka.txt    | 10 ++++++----
+ kolmas.txt |  4 +++-
+ 2 files changed, 9 insertions(+), 5 deletions(-)
+
+commit 86df9b98624545ce2b98a0c7a23cf369347ef20b
+Author: Katja <katja.kvintus@icloud.com>
+Date:   Sat Nov 5 14:26:09 2022 +0200
+
+    päivitys
+
+ tiedosto.txt | 627 -----------------------------------------------------------
+ 1 file changed, 627 deletions(-)
+
+commit 04932ce1a4a0b042faf59ac9cf40450cc3a4be8d
+Author: Katja <katja.kvintus@icloud.com>
+Date:   Sat Nov 5 14:25:34 2022 +0200
+
+    päivitys
+
+ eka.txt | 627 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 627 insertions(+)
+
+commit c225fc9c72bb30449dce3d0e47f78346d74cedd3
+Author: Katja <katja.kvintus@icloud.com>
+Date:   Sat Nov 5 14:24:25 2022 +0200
+
+    Päivitys
+
+ tiedosto.txt.save | 43 -------------------------------------------
+ 1 file changed, 43 deletions(-)
+
+commit 5181c5bfbdd67488ce82eb7ef8672fe55a29d1d0
+Author: Katja <katja.kvintus@icloud.com>
+Date:   Sat Nov 5 14:22:53 2022 +0200
+
+    Tiedosto tiedosto.txt nimetty uudelleen: eka.txt
+
+ toinen.txt | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit b86e4264bd185a085bf2e7574e2b1c207fcc3ad4
+Author: Katja <katja.kvintus@icloud.com>
+Date:   Sat Nov 5 13:51:20 2022 +0200
+
+    Muokkauksia tiedostoon tiedosto.txt
+
+ tiedosto.txt | 38 +++++++++++++++++++++++++++++++++-----
+ 1 file changed, 33 insertions(+), 5 deletions(-)
+
+commit 4950bc5e4420266dcf07ee98102dcee0467c1633
+Author: Katja <katja.kvintus@icloud.com>
+Date:   Sat Nov 5 13:48:44 2022 +0200
+
+    Lisätty lisää tekstiä tiedostoon tiedosto.txt
+
+ tiedosto.txt      | 546 ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ tiedosto.txt.save |  43 +++++
+ 2 files changed, 589 insertions(+)
+
+commit 4a7041bc87c5c6a6b388db79c335b69c16ed43cd
+Author: Katja <katja.kvintus@icloud.com>
+Date:   Sat Nov 5 13:43:10 2022 +0200
+
+    Lisätty iso määrä tekstiä tiedostoon tiedosto.txt
+
+ tiedosto.txt | 52 ++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 52 insertions(+)
+
+commit 28a3c2e1e71d3dc3c69d1d0754066b8197fc1f9e
+Author: Katja <katja.kvintus@icloud.com>
+Date:   Sat Nov 5 13:28:25 2022 +0200
+
+    muutoksia tiedostoihin toinen.txt ja kolmas.txt
+
+ kolmas.txt | 1 +
+ toinen.txt | 1 +
+ 2 files changed, 2 insertions(+)
+
+commit bf94a8aeee37f922e90c9dab717e0354952902e2
+Author: Katja <katja.kvintus@icloud.com>
+Date:   Sat Nov 5 13:25:09 2022 +0200
+
+    kolmas.txt
+
+ kolmas.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit ed3698499b4fe0c3f748612dccd4dc0e0a455fdf
+Author: Katja <katja.kvintus@icloud.com>
+Date:   Sat Nov 5 13:12:25 2022 +0200
+
+    muutos ja lisäys
+
+ tiedosto.txt | 1 +
+ toinen.txt   | 0
+ 2 files changed, 1 insertion(+)
+
+commit 69a5714752ec1a3c16cd284aba3753dea4688e06
+Author: Katja <katja.kvintus@icloud.com>
+Date:   Sat Nov 5 12:58:15 2022 +0200
+
+    tiedosto.txt luotu
+
+ tiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
