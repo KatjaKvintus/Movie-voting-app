@@ -18,7 +18,7 @@ Pääkäyttäjä
 
 ## Käyttöliittymäluonnos
 
-
+![](kayttoliittyma-luonnos-versio-1.png)
 
 Sovellus koostuu viidestä eri näkymästä, joista yksi näkyy vain pääkäyttäjälle. Aloitusnäytössä on kaksi mahdollisuutta: kirjaudu sisään tai luo uusi käyttäjätili. Molemmista pääsee välivaiheen kautta varsinaiseen sovellusnäkymään, jossa näkyy ylimpänä käyttäjän status (onko jo äänestänyt menossa olevassa äänestyksessä vai ei), alareunassa mahdollisuus ehdottaa uutta leffaa seuraavaan äänestykseen, ja keskellä
 ikkuna, jossa näkyy yksi kolmesta vaihtoehdosta:
