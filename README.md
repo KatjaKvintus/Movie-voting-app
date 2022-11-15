@@ -11,3 +11,7 @@
 Lisäys: vko 1, t. 16 (paikallisella koneella jokin muutos)
 
 Epäsynkrooni: vko 1, t. 17 (tämä on paikallisella koneella tehty muutos)
+
+### Viikko 2
+
+[Työaikakirjanpito] (https://github.com/KatjaKvintus/ot-harjoitustyo/blob/master/dokumentaatio/tuntikirjanpito.md)
