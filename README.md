@@ -15,3 +15,5 @@ Epäsynkrooni: vko 1, t. 17 (tämä on paikallisella koneella tehty muutos)
 ### Viikko 2
 
 [Tuntikirjanpito](https://github.com/KatjaKvintus/ot-harjoitustyo/blob/master/dokumentaatio/tuntikirjanpito.md)
+
+[Vaatimusmäärittely](https://github.com/KatjaKvintus/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
