@@ -7,11 +7,11 @@
 | 15.11. | 3 | vaatimusmäärittely-dokumentin viimeistelyä ja käyttöliittymän piirtäminen |
 | 21.11. | 2 | User-luokan tekoa, ekan testin luonnostelua |
 | 22.11. | 2.5 | Ekan testin tekoa huonolla menestyksellä ja epätoivoista dokumentaation lukemista |
+| 27.11. | 1.5 | Äänestys-toiminnon hahmottelua |
+| 28.11. | 2.5 | Äänestys-toiminnon kirjoittaminen jatkuu, muutoksia käyttöliittymään |
 |  |  |  |
 |  |  |  |
 |  |  |  |
 |  |  |  |
 |  |  |  |
-|  |  |  |
-|  |  |  |
-| yht  11 h |   | | 
+| yht  15 h |   | | 
