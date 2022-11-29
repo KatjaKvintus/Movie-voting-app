@@ -5,22 +5,27 @@ from datetime import datetime
 
 class User:
 
+    # Keeps track of all usernames in use
+    usernames = []
+
     # The class constructor for creating new users
     def __init__(self, username, password):
         self.username = username
         self.password = password
-        #self.can_vote = True
+        #self.can_vote = True      
 
-    all_users = {}
-
-    # Read usernamelist from a file
-    with open("userlist.txt") as userlistfile:
+    def load_users(all_users):
+        # Read usernamelist from a file
+        with open("userlist.txt") as userlistfile:
 
             for row in userlistfile:
                 row = row.replace("\n", "")
                 user_info = row.split(" ")
                 new_user = User(user_info[0], user_info[1])
+                User.usernames.append(user_info[0])
                 all_users.append(new_user)
+        
+        return all_users
 
     def username(self, username: str):
         return username
@@ -31,7 +36,7 @@ class User:
         username_new = input("Write the username you like to use: ")
 
         while True:
-            if username_new not in User.all_users and len(username_new) >= 5:
+            if username_new not in User.usernames and len(username_new) >= 5:
                 break
             if username_new in User.usernames:
                 print("This username is already taken.")
@@ -48,9 +53,8 @@ class User:
                 print("The password needs to be at least 5 characters long.\n")
                 password_new = input("Please choose a new password: ")
 
-        new_user = (username_new, password_new)
-        User.all_users.append(new_user)
-        User.usernames.append(username_new)
+        new_user = User(username_new, password_new)
+        Ui.all_users.append(new_user)
         print(f"Nice to meet you, {username_new }!")
         print("")
     
@@ -103,6 +107,7 @@ class Ui(User):
 
     movie_suggestions = []
     this_weeks_votes = []
+    all_users = []
 
     def __init__(self):
         self.ui = []

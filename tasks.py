@@ -15,3 +15,7 @@ def coverage(ctx):
 @task()
 def coverage_report(ctx):
     ctx.run("coverage html", pty=True)
+
+@task()
+def invoke(ctx):
+    ctx.run("poetry run invoke lint", pty=True)
