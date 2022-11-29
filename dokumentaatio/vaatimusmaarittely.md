@@ -8,8 +8,8 @@ Tällä sovelluksella voi ehdottaa elokuvaa ja äänestää valitusta listasta e
 
 Sovelluksella on kahdenlaisia käyttäjiä: 
 Peruskäyttäjä: 
-- voi ehdottaa elokuvaa seuraavaan äänestykseen
-- voi äänestää yhtä listan elokuvista
+- voi ehdottaa elokuvaa seuraavaan äänestykseen - TEHTY
+- voi äänestää yhtä listan elokuvista - TEHTY
 - voi katsoa äänestyksen tilanteen
 Pääkäyttäjä
 - hyväksyy tai hylkää seuraavaan äänestykseen ehdotetun elokuvan 
@@ -28,8 +28,8 @@ ikkuna, jossa näkyy yksi kolmesta vaihtoehdosta:
 
 ## Ennen kirjautumista
 
-- Käyttäjä voi luoda järjestelmään käyttäjätilin (käyttäjätunnuksen täytyy olla uniikki ja vähintään 5 merkkiä pitkä, ja salasanan täytyy olla vähintään 5 merkkiä pitkä)
-- Järjestelmään kirjaudutaan tunnuksella ja salanalla. Jos tunnusta ei ole olemassa tai salasana on väärin, siitä tulee virheilmoitus.
+- Käyttäjä voi luoda järjestelmään käyttäjätilin (käyttäjätunnuksen täytyy olla uniikki ja vähintään 5 merkkiä pitkä, ja salasanan täytyy olla vähintään 5 merkkiä pitkä) - TEHTY
+- Järjestelmään kirjaudutaan tunnuksella ja salanalla. Jos tunnusta ei ole olemassa tai salasana on väärin, siitä tulee virheilmoitus. - TEHTY
 
 ## Kirjautumisen jälkeen
 
