@@ -9,9 +9,9 @@
 | 22.11. | 2.5 | Ekan testin tekoa huonolla menestyksellä ja epätoivoista dokumentaation lukemista |
 | 27.11. | 1.5 | Äänestys-toiminnon hahmottelua |
 | 28.11. | 2.5 | Äänestys-toiminnon kirjoittaminen jatkuu, muutoksia käyttöliittymään |
+| 29.11. | 3  | Käyttöliittymän muokkausta: äänestys, vanhan käyttäjän tietojen tarkistus, leffan ehdotus |
 |  |  |  |
 |  |  |  |
 |  |  |  |
 |  |  |  |
-|  |  |  |
-| yht  15 h |   | | 
+| yht  18 h |   | | 

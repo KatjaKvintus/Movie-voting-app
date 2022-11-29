@@ -3,4 +3,11 @@
 
 ### Viikko 3
 
-22.11.2022 Projektin aloitus
+- User-luokan rakentaminen on aloitettu
+- User-luokan testien kirjoittaminen on aloitettu
+
+### Viikko 4
+
+- Muutoksia käyttöliittymään: lisätty äänestys-toiminto (kesken) ja leffan ehdotus -toiminto (kesken)
+- Tietojen tallennus siirtyy ohjelman sisäisestä tallennuksesta tiedostoon (myöhemmin pilvitiedostoon) - kesken
+
