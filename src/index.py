@@ -1,9 +1,9 @@
-from src import ui
+from ui import Ui
 
 
 def main():
 
-    ui.startpage()
+    Ui.startpage()
 
 
 if __name__ == "__main__":
