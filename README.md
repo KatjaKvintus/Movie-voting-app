@@ -9,9 +9,13 @@ HUOM: Viimeisimpien korjausyritysten jälkeen sovellus _ei toimi_: se ei tallenn
 ### Dokumentaatio
 
 [Tuntikirjanpito](https://github.com/KatjaKvintus/ot-harjoitustyo/blob/master/dokumentaatio/tuntikirjanpito.md)
+
 [Vaatimusmäärittely](https://github.com/KatjaKvintus/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
+
 [Changelog](https://github.com/KatjaKvintus/ot-harjoitustyo/blob/master/dokumentaatio/changelog.md)
+
 [Arkkitehtuuri](https://github.com/KatjaKvintus/ot-harjoitustyo/blob/master/dokumentaatio/arkkitehtuuri.md)
+
 [Release](https://github.com/KatjaKvintus/ot-harjoitustyo/releases/tag/viikko5)
 
 
