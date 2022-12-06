@@ -3,6 +3,8 @@ Ohjelmistotekniikka, harjoitustyö
 
 Tällä sovelluksella voi ehdottaa elokuvaa ja äänestää valitusta listasta elokuvaa viikoittaista leffailtaa varten. Apin käyttöä varten tulee luoda käyttäjätili. Peruskäyttäjä voi äänestää elokuvaa valmiista listasta ja ehdottaa haluamaansa elokuvaa seuraavaa äänestystä varten. Yksi tai useampi käyttäjä voi olla pääkäyttäjä, jolla on oikeus asettaa äänestettävät elokuvat ja sulkea äänestys. 
 
+HUOM: Viimeisimpien korjausyritysten jälkeen sovellus _ei toimi_: se ei tallenna tietoja eikä päästä käyttäjää eteenpäin login-ikkunasta. 
+
 
 ### Dokumentaatio
 
