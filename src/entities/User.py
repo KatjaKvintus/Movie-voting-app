@@ -1,4 +1,27 @@
 #from Ui import Ui
+from repositories import UserRepository
+import os
+
+
+def create_new_user(username_new, password_new):
+    new_user = User(username_new, password_new)
+    #userrepository.save_new_user_in_database(new_user)
+
+    try:
+        save_location = "/repositories"
+        filename = "movieapp_users.csv"
+
+        save_path = os.path.join(save_location, filename)
+
+        with open(save_path, "a") as userlistfile:
+            line = ""
+            line += new_user.username + "," + new_user.password                             
+            line += "\n"
+            userlistfile.write(line)
+            userlistfile.close()
+        
+    except IOError as exception:
+        raise IOError("ERROR: saving is not successful.")
 
 class User:
 
@@ -14,25 +37,25 @@ class User:
         self.password = password
         #self.can_vote = True      
 
-    def load_users(all_users):
-        # Read usernamelist from a file
-        with open("userlist.txt") as userlistfile:
-
-            for row in userlistfile:
-                row = row.replace("\n", "")
-                user_info = row.split(" ")
-                new_user = User(user_info[0], user_info[1])
-                User.usernames.append(user_info[0])
-                all_users.append(new_user)
-        
-        return all_users
+    #def load_users(all_users):
+    #    # Read usernamelist from a file
+    #    with open("userlist.txt") as userlistfile:
+    #
+    #        for row in userlistfile:
+    #            row = row.replace("\n", "")
+    #            user_info = row.split(" ")
+    #            new_user = User(user_info[0], user_info[1])
+    #            User.usernames.append(user_info[0])
+    #            all_users.append(new_user)
+    #    
+    #    return all_users
 
     def username(self, username: str):
         return username
 
     # Creating a new user account. The username should be unique and both username and password
     # should be minimum 5 characters long.
-    def create_new_user(all_users):
+    def create_new_user_OLD(all_users):
         username_new = input("Write the username you like to use: ")
 
         while True:

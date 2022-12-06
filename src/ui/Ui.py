@@ -1,4 +1,4 @@
-from User import User
+from entities import User
 from datetime import datetime
 
 

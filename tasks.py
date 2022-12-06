@@ -18,7 +18,7 @@ def coverage_report(ctx):
     ctx.run("coverage html", pty=True)
 
 @task
-def invoke_test(ctx):
-    ctx.run("invoke test", pty=True)
+def test(ctx):
+    ctx.run("pytest src", pty=True)
 
 

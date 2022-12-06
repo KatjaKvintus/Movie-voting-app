@@ -1,12 +1,21 @@
-from Ui import Ui
-from User import User
-from Loginpage import Loginpage
-
+from entities import *
+from ui import Loginpage
+from repositories import UserRepository
+from tkinter import *
 
 def main():
 
-    User.load_users(User.all_users)
-    Loginpage.start_application()
+    window = Tk()
+    window.title("Movie voting app")
+     
+    ui = Loginpage.Loginpage(window)
+    ui.start_application()
+    
+    window.mainloop()
+
+    #User.load_users(User.all_users)
+    user_repository = UserRepository()
+    Loginpage.start_application(user_repository = user_repository)
 
 
 if __name__ == "__main__":
