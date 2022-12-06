@@ -2,8 +2,8 @@
 
 class UserRepository:
 
-    #def __init__(self):
-        #self._file_path = file_path
+    def __init__(self):
+        self._save_location = "src/movieapp_users.txt"
     
 
     # Save new users name ans password into file

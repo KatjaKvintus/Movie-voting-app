@@ -14,8 +14,8 @@ def main():
     window.mainloop()
 
     #User.load_users(User.all_users)
-    user_repository = UserRepository()
-    Loginpage.start_application(user_repository = user_repository)
+    #user_repository = UserRepository()
+    Loginpage.start_application()
 
 
 if __name__ == "__main__":

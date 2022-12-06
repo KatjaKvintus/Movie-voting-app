@@ -12,6 +12,14 @@
 | 29.11. | 3  | Käyttöliittymän muokkausta: äänestys, vanhan käyttäjän tietojen tarkistus, leffan ehdotus |
 | 4.12. | 3 | Tekstikäyttöliittymän korjauksia |
 | 5.12. | 2.5 | Graafisen käyttöliittymän hahmottelua: login-sivu ja äänestys-sivu |
+| 6.12 | 6 | Graafisen käyttöliittymän rakennus jatkuu, sovelluslogiikka rikki |
 |  |  |  |
-|  |  |  |
-| yht  23.5 h |   | | 
+|  |  |  | 
+|  |  |  | 
+|  |  |  | 
+|  |  |  | 
+|  |  |  | 
+|  |  |  | 
+|  |  |  | 
+
+| yht  29.5 h |   | | 
