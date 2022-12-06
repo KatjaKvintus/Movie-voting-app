@@ -10,8 +10,8 @@
 | 27.11. | 1.5 | Äänestys-toiminnon hahmottelua |
 | 28.11. | 2.5 | Äänestys-toiminnon kirjoittaminen jatkuu, muutoksia käyttöliittymään |
 | 29.11. | 3  | Käyttöliittymän muokkausta: äänestys, vanhan käyttäjän tietojen tarkistus, leffan ehdotus |
+| 4.12. | 3 | Tekstikäyttöliittymän korjauksia |
+| 5.12. | 2.5 | Graafisen käyttöliittymän hahmottelua: login-sivu ja äänestys-sivu |
 |  |  |  |
 |  |  |  |
-|  |  |  |
-|  |  |  |
-| yht  18 h |   | | 
+| yht  23.5 h |   | | 
