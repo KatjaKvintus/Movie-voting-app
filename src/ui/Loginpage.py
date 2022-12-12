@@ -1,6 +1,6 @@
 from tkinter import Tk, ttk, constants
-from entities import User
-from ui import *
+from entities import AppUser
+#from ui import *
 #import Mainpage            # TÄMÄ AVAA APIN SUORAAN PÄÄSIVULLE
 
 class Loginpage:
@@ -41,7 +41,6 @@ class Loginpage:
         emptyrow = ttk.Label(master = self._root, text = " ")
         
         create_new_account_button = ttk.Button(master = self._root, text = "Create account", command=self.handle_create_new_user_button_click)
-        #handle_create_new_user_button_click()
 
         new_user_heading_label.grid(row = 0, column = 0, columnspan = 2)
         new_user_username_label.grid(row = 1, column = 0)
@@ -89,19 +88,10 @@ class Loginpage:
     def handle_create_new_user_button_click(self):
         name = self.new_user_username_entry.get()
         password = self.new_user_password_entry.get()
-        User.create_new_user(name, password)
+        AppUser.create_new_user(name, password)             # TÄSSÄ KAATUU
         Loginpage.show_mainpage()
         
 
     def open_mainpage_view():
         Loginpage.show_mainpage()
 
-
-
-#window = Tk()
-#window.title("Movie voting app")
-# 
-#ui = Loginpage(window)
-#ui.start_application()
-#
-#window.mainloop()

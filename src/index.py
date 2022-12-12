@@ -1,6 +1,6 @@
-from entities import *
+#from entities import *
 from ui import Loginpage
-from repositories import UserRepository
+#from repositories import UserRepository
 from tkinter import *
 
 def main():
