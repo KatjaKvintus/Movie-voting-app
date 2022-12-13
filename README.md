@@ -14,7 +14,7 @@ Tällä sovelluksella voi ehdottaa elokuvaa ja äänestää valitusta listasta e
 
 [Arkkitehtuuri](https://github.com/KatjaKvintus/ot-harjoitustyo/blob/master/dokumentaatio/arkkitehtuuri.md)
 
-[Release](https://github.com/KatjaKvintus/ot-harjoitustyo/releases/tag/viikko5)
+[Release](https://github.com/KatjaKvintus/ot-harjoitustyo/releases/tag/viikko6)
 
 [Käyttöohje](https://github.com/KatjaKvintus/ot-harjoitustyo/blob/master/dokumentaatio/kayttoohje.md)
 
