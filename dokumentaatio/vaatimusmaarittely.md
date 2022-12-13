@@ -20,26 +20,45 @@ Pääkäyttäjä
 
 ![](kayttoliittyma-luonnos-versio-1.png)
 
-Sovellus koostuu viidestä eri näkymästä, joista yksi näkyy vain pääkäyttäjälle. Aloitusnäytössä on kaksi mahdollisuutta: kirjaudu sisään tai luo uusi käyttäjätili. Molemmista pääsee välivaiheen kautta varsinaiseen sovellusnäkymään, jossa näkyy ylimpänä käyttäjän status (onko jo äänestänyt menossa olevassa äänestyksessä vai ei), alareunassa mahdollisuus ehdottaa uutta leffaa seuraavaan äänestykseen, ja keskellä
-ikkuna, jossa näkyy yksi kolmesta vaihtoehdosta:
-- Äänestysvaihtoehdot ja äänestysnapit, jos käyttäjä ei ole vielä äänestänyt, ja äänestys on auki
-- Äänestystilanne, jos käyttäjä on jo äänestänyt ja äänestys on auki
-- Äänestyksen voittanut elokuva, jos äänestys on loppunut ja leffavaihtoehto valittu
+Kuvasta poiketen sovellus toimii tekstikäyttäliittymällä, ei graafisella. Kuva kuitenkin havainnollistaa sovelluksen ominaisuuksia.
+
+Sovelluksen käynnistyessä käyttäjällä on meljä vaihtoehtoa:
+  [N] Create new user account 
+  [L] Log in as returning user 
+  [A] Log in as the admin user 
+  [X] Close app
+
+Käyttäjä valitsee sopivan vaihtoehdon antamalla sitä vastaavan kirjaimen []. Sovellus hyväksyy sekä ison että pienen kirjaimen. Sekä uusi käyttäjä
+että jo aiemmin tilin luonut käyttäjä pääsevät tunnus-salasana -vaiheen jälkeen äänestämään elokuvaa. Admin-kirjautuminen antaa tarjolle admin-työkalut:
+  [P]rint current voting list 
+  [C]lear voting list 
+  [S]et up a new votings list 
+  [E]xit admin tools 
 
 ## Ennen kirjautumista
 
-- Käyttäjä voi luoda järjestelmään käyttäjätilin (käyttäjätunnuksen täytyy olla uniikki ja vähintään 5 merkkiä pitkä, ja salasanan täytyy olla vähintään 5 merkkiä pitkä) - TEHTY
+Sovelluksen käynnistyessä käyttäjällä on meljä vaihtoehtoa:
+  [N] Create new user account
+  [L] Log in as returning user
+  [A] Log in as the admin user
+  [X] Close app
+
+- Käyttäjä voi luoda järjestelmään käyttäjätilin (käyttäjätunnuksen täytyy olla uniikki ja vähintään 3 merkkiä pitkä - TEHTY
 - Järjestelmään kirjaudutaan tunnuksella ja salanalla. Jos tunnusta ei ole olemassa tai salasana on väärin, siitä tulee virheilmoitus. - TEHTY
+- Admin-käyttäjälle on määritelty omat työkalut - TEHTY
 
 ## Kirjautumisen jälkeen
 
-* Käyttäjä näkee statuksen, joka on yksi seuraavista
-- Äänestysvaihtoehdot ja äänestysnapit, jos käyttäjä ei ole vielä äänestänyt, ja äänestys on auki
-- Äänestystilanne, jos käyttäjä on jo äänestänyt ja äänestys on auki
-- Äänestyksen voittanut elokuva, jos äänestys on loppunut ja leffavaihtoehto valittu
-* Käyttäjä voi ehdottaa uutta elokuvaa (pääkäyttäjä hyväksyy)
-* Käyttäjä voi äänestää elokuvaa, jos äänestys on auki eikä hän ole vielä äänestänyt
-* Käyttäjä voi kirjautua ulos järjestelmästä
+Käyttäjä:
+  - Käyttäjällä on mahdollisuus äänestää elokuvaa - TEHTY
+  - Käyttäjä voi ehdottaa uuttaa elokuvaa ensi viikon äänestykseen
+  - Käyttäjä voi kirjautua ulos järjestelmästä - TEHTY
+
+Admin:
+  - Voi tyhjentää elokuvalistan - TEHTY
+  - Voi asettaa uuden äänestyslistan 
+  - Voi julkaista äänestyksen voittaneen elokuvan
+  - voi hyväksyä käyttäjän elokuvaehdotuksen osaksi seuraavaa äänestyslistaa
 
 ## Jatkokehitysideoita
 

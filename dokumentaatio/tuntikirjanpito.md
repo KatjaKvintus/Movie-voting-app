@@ -13,13 +13,13 @@
 | 4.12. | 3 | Tekstikäyttöliittymän korjauksia |
 | 5.12. | 2.5 | Graafisen käyttöliittymän hahmottelua: login-sivu ja äänestys-sivu |
 | 6.12 | 6 | Graafisen käyttöliittymän rakennus jatkuu, sovelluslogiikka rikki |
-|  |  |  |
-|  |  |  | 
-|  |  |  | 
-|  |  |  | 
+| 10.12. | 2 | Graafisen UI:n korjaamista |
+| 11.12. | 1.5 | Graafisen UI:n korjaamista | 
+| 12.12. | 3.5 | Graafisen UI:n korjaamista | 
+| 13.13. | 4.5 | Luovutus: paluu tekstikäyttöliittymään.  | 
 |  |  |  | 
 |  |  |  | 
 |  |  |  | 
 |  |  |  | 
 
-| yht  29.5 h |   | | 
+| yht  41  h |   | | 

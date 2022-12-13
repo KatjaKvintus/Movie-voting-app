@@ -1,3 +1,0 @@
-testaaja1, salasana
-testaaja2, salasana
-testaaja3, salasana
