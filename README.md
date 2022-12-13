@@ -16,6 +16,9 @@ Tällä sovelluksella voi ehdottaa elokuvaa ja äänestää valitusta listasta e
 
 [Release](https://github.com/KatjaKvintus/ot-harjoitustyo/releases/tag/viikko5)
 
+[Käyttöohje](https://github.com/KatjaKvintus/ot-harjoitustyo/blob/master/dokumentaatio/kayttoohje.md)
+
+
 ### Asennus
 
 1. Asenna riippuvuudet komennolla
