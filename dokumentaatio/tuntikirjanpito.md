@@ -16,10 +16,16 @@
 | 10.12. | 2 | Graafisen UI:n korjaamista |
 | 11.12. | 1.5 | Graafisen UI:n korjaamista | 
 | 12.12. | 3.5 | Graafisen UI:n korjaamista | 
-| 13.13. | 4.5 | Luovutus: paluu tekstikäyttöliittymään.  | 
+| 13.12. | 4.5 | Luovutus: paluu tekstikäyttöliittymään.  | 
+| 18.12. | 4 | Korjauksia + uusia toimintoja (admin-käyttäjän lisääminen, äänestystoiminto, admin-työkalut, Movie-luokan kasaaminen) | 
 |  |  |  | 
 |  |  |  | 
 |  |  |  | 
-|  |  |  | 
+|  |  |  |
+|  |  |  |
+|  |  |  |
+|  |  |  |
+|  |  |  |
+|  |  |  |
 
-| yht  41  h |   | | 
+| yht  45  h |   | | 
