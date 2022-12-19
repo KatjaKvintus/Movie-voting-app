@@ -1,7 +1,11 @@
+
+
+
 class Movie():
 
     list_of_movies_to_be_voted = []
     list_of_movie_suggestions = []
+    
 
 
     def __init__(self, movie_name: str, publish_year: str):
@@ -10,13 +14,70 @@ class Movie():
         self.votes = 0
 
 
+    # Movie basic functionalities for user
     def welcome_to_movieapp():
 
-        print("This weeks movie vote is open!")
-        answer = input("Would you like to vote? Press [Y]es or [N]o: ")
+        voting_status = Movie.check_voting_status()
 
-        if answer == "Y" or answer == "y":
-            Movie.vote_for_movie()
+        if voting_status == "open":
+                print("This weeks movie vote is open!\n") 
+        else: 
+            print("Unfortunately there is no ongoing movie voting right now.") 
+
+
+        while True:            
+
+            print("What would you like to do?")
+
+            if voting_status == "open":
+                print("  [S]ee movie voting list")
+                print("  [V]ote for a movie ")
+            print("  [P]ropose a movie for nex weeks vote")
+            print("  [E]xit app \n")
+
+            answer = input("Answer by giving a letter: ")
+
+            if answer == "E" or answer == "e":
+                print("Bye!")
+                exit()
+            elif answer == "S" or answer == "s":
+                Movie.print_voting_list()
+            elif answer == "V" or answer == "v":
+                Movie.vote_for_movie()
+            elif answer == "P" or "p":
+                Movie.suggest_a_movie()
+            else:
+                print("Pelase choose from the list. ")
+
+
+
+    def check_voting_status():
+
+        current_voting_list_file_exists = False
+        
+        while not current_voting_list_file_exists:     
+
+            #movieapp_voting_status = "entities/voting_status.txt"       PALAUTA ENNEN KUIN JULKAISET!!!!
+            movieapp_voting_status = "/home/kvintus/ot-harjoitustyo/src/entities/voting_status.txt"
+
+            try:
+                # Test if file exists
+                with open(movieapp_voting_status) as testfile:
+                    current_voting_list_file_exists = True
+            
+            except OSError:
+                print("Error: voting status not found.")
+                exit()
+
+        # Read file and save movies list_of_movies_to_be_voted list
+        with open(movieapp_voting_status) as file:
+            for row in file:
+                status_now = row
+        
+            file.close()
+
+        return status_now
+
 
 
     ######################## This is for testing only
@@ -34,7 +95,6 @@ class Movie():
     def movie_to_string(movie):
         return(f"{movie.movie_name} (published in {movie.publish_year})")
     
-
     # KESKEN
     def vote_for_movie():
 

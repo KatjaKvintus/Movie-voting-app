@@ -1,5 +1,5 @@
-
 from entities.AppUser import AppUser
+from entities.AdminUser import AdminUser
 from entities.Movie import Movie
 
 
@@ -21,16 +21,17 @@ def main():
     start()
 
 
+# Start menu for all users, both regular and admind
 def start():
 
     print("Welcome to the movie voting app!\n")
 
     while True:
+
         print("Functionalities:")
         print("  [N] Create new user account ")
         print("  [L] Log in as returning user ")
-        print("  [A] Log in as the admin user ")
-        print("  [S] Suggest a movie for the next weeks vote ")    
+        print("  [A] Log in as the admin user ") 
         print("  [X] Close app\n")
         choice = input("My choice: ")
 
@@ -39,12 +40,12 @@ def start():
         elif choice == "L" or choice == "l":
             AppUser.log_in_returning_user()
         elif choice == "A" or choice == "a":
-            AppUser.admin_tools()
-        elif choice == "S" or choice == "s":
-            Movie.
+            AdminUser.admin_tools()
         elif choice == "X" or choice == "x":
             print("Bye!")
             exit()
+        else:
+            print("Pelase choose from the list. ")
 
 
 # Check if userlist and admin userlist are available and if it is, download both and save users to a dictionaries
@@ -73,10 +74,13 @@ def check_and_download_userlists():
             username = str.strip(userdata[0])
             password = str.strip(userdata[1])
             AppUser.all_users[username] = password
+            AppUser.taken_usernames.append(username)
     
         file.close()
 
     admin_userlist_file_exists = False
+
+
    
     while not admin_userlist_file_exists:     
 
@@ -98,7 +102,8 @@ def check_and_download_userlists():
                 userdata = line.split(",")
                 username = str.strip(userdata[0])
                 password = str.strip(userdata[1])
-                AppUser.admin_users[username] = password
+                AdminUser.admin_users[username] = password
+                AppUser.taken_usernames.append(username)
         
             file.close()
 
@@ -139,7 +144,9 @@ def download_movie_lists():
     
         file.close()
 
-        
+
+
+
     
 
 if __name__ == "__main__":
