@@ -1,15 +1,4 @@
-katti,matikainen
-testi1,testi1
-testi2,testi2
-Katja,Katja2
-Katja2,Katja2
-kissa,jahiiri
-peppi pitkätossu,efraimintytär
-testi3,testi3
-Katja,Lipponen
-Katja2,Kat
-The Matrix,1999
-The Matrix reloaded,2003
-The Matrix revolutions,2003
-The Matrix Resurrestions,2021
-pekka,puupää
+Pipsa,Possu
+Kumpula,Kumpula
+peppi,pitkätossu
+peppi,pitkätossu
