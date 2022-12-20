@@ -12,19 +12,23 @@
 
 ![](https://github.com/KatjaKvintus/ot-harjoitustyo/blob/master/dokumentaatio/luokkakaavio.jpg)
 
-Pakkaus ui sisältää käyttöliittymästä ja käyttäjistä vastaavan koodin. Functionalities sisältää 
-erilaisia toiminnallisuuksia, kuten äänestys- ja ehdotus-toiminnot, sekä pääkäyttäjän toiminnoista vastaavan koodin. 
-Repositories sisältää tietojen tallennuksesta ja hakemisesta vastaavan koodin.
-Entities-pakkauksessa on koodia, joka käsittelee äänestystoiminnan tuloksien käsittelyä.
+Ohjelman suoritys käynnistyy hakemiston juuressa olevasta tiedostosta index.py. Muu koodi on jaettu seuraaviin kokonaisuuksiin:
+- entities (luokat AppUser, AdminUser ja Movie: uusien olioiden luominen)
+- functionalities (luokka Movieservice: sovelluksen perustoiminnallisuuden, jotka keskittyvät elokuvaäänestyksen ympärille)
+- repositories (AppUserRepository, AdminUserRepository, MovieRepository: tiedon pysyväistallennus ja hakeminen)
+
 
 ## Käyttöliittymä
 
-Sovelluksessa on tekstikäyttöliittymä. Luokkia on 2-5:
+Sovelluksessa on tekstikäyttöliittymä. Luokkia on 5:
 -	AppUser (käsittelee käyttäjätilien toiminnot)
 -	Movie (käsittelee leffoihin liittyvät toiminnot)
--	AppUserServices?
--	MovieServices?
--	AdminUserServices?
+-	AppUserServices (käyttäjätilen oheismetodit)
+-	MovieServices  (elokuvatoimintojen toiminnot)
+-	AdminUserServices (admin-käyttäjien oheistoiminnot)
+- AppUserRepository (käyttäjiin liittyvän tiedon pysyväistallennus)
+- AdminUserRepository (admin-käyttäjiin liittyvän tiedon pysyväistallennus)
+- MovieRepository (elokuviin liittyvän tiedon pysyväistallennus)
 
 Kun käyttäjä avaa sovelluksen, hänellä on kolme vaihtoehtoa:
 -	Luo uusi käyttäjätili (”Create new user account”)
@@ -56,12 +60,14 @@ Jos käyttäjä kirjautuu sovellukseen admin-käyttäjänä, hänellä on käyt�
 
 ## Sovelluslogiikka
 
-Luokat AppUser ja AdminUser kuvaavat käyttäjiä ja käyttäjien toimintoja. Movie-luokka käsittelee elokuvien äänestyksen, äänestyslistojen luomisen ja uuden elokuvan ehdottamisen.
+Luokat AppUser ja AdminUser kuvaavat käyttäjiä ja käyttäjien toimintoja. Movie-luokka käsittelee elokuvien äänestyksen, äänestyslistojen luomisen ja uuden elokuvan ehdottamisen. MovieServices-luokka sisältää ne toiminnallisuudet, jotka keskittyvät elokuvaäänestyksen ympärille. Repositories-kokonaisuus vastaa tiedon pysyväistallennuksesta ja tiedon hakemisesta.
 
 
 ## Tietojen pysyväistallennus
 
 ### Tiedostot
+
+Repositories-kokonaisuus vastaa tiedon pysyväistallennuksesta ja tiedon hakemisesta. Tiedot tallennetaan txt-tiedostoihin, joita sovellus lukee ja kirjoittaa. Jatkossa sovellusta voisi kehittää niin, että tietojen tallennus siirtyy pilvessa oleviin tietokantatauluihin.
 
 
 ## Päätoiminnallisuudet
