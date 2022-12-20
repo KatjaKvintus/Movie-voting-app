@@ -2,11 +2,14 @@
 
 ## Rakenne
 
-Koodin pakkausrakenne:
+### Koodin pakkausrakenne:
 
-![](https://github.com/KatjaKvintus/ot-harjoitustyo/blob/master/dokumentaatio/rakenne_alustava.png)
+![](https://github.com/KatjaKvintus/ot-harjoitustyo/blob/master/dokumentaatio/pakkausrakenne.jpg)
 
-Luokkakaavio:
+
+
+### Luokkakaavio:
+
 ![](https://github.com/KatjaKvintus/ot-harjoitustyo/blob/master/dokumentaatio/luokkakaavio.jpg)
 
 Pakkaus ui sisältää käyttöliittymästä ja käyttäjistä vastaavan koodin. Functionalities sisältää 
