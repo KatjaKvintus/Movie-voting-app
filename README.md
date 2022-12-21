@@ -1,7 +1,7 @@
 # Movie voting app - leffaillan leffan äänestysappi
 Ohjelmistotekniikka, harjoitustyö
 
-Tällä sovelluksella voi ehdottaa elokuvaa ja äänestää valitusta listasta elokuvaa viikoittaista leffailtaa varten. Apin käyttöä varten tulee luoda käyttäjätili. Peruskäyttäjä voi äänestää elokuvaa valmiista listasta ja ehdottaa haluamaansa elokuvaa seuraavaa äänestystä varten. Yksi tai useampi käyttäjä voi olla pääkäyttäjä, jolla on oikeus asettaa äänestettävät elokuvat ja sulkea äänestys. 
+Tällä sovelluksella voi ehdottaa elokuvaa ja äänestää valitusta listasta elokuvaa viikoittaista leffailtaa varten. Apin käyttöä varten tulee luoda käyttäjätili. Peruskäyttäjä voi katsoa elokuvalistan, äänestää elokuvaa ja ehdottaa haluamaansa elokuvaa seuraavaa äänestystä varten. Yksi tai useampi käyttäjä voi olla pääkäyttäjä, jolla on oikeus asettaa äänestettävät elokuvat, luoda uusia admin-käyttäjiö ja sulkea äänestys. 
 
 
 ### Dokumentaatio
@@ -14,7 +14,9 @@ Tällä sovelluksella voi ehdottaa elokuvaa ja äänestää valitusta listasta e
 
 [Arkkitehtuuri](https://github.com/KatjaKvintus/ot-harjoitustyo/blob/master/dokumentaatio/arkkitehtuuri.md)
 
-[Release](https://github.com/KatjaKvintus/ot-harjoitustyo/releases/tag/viikko6)
+[Release 1](https://github.com/KatjaKvintus/ot-harjoitustyo/releases/tag/viikko5)
+
+[Release 2](https://github.com/KatjaKvintus/ot-harjoitustyo/releases/tag/viikko6)
 
 [Käyttöohje](https://github.com/KatjaKvintus/ot-harjoitustyo/blob/master/dokumentaatio/kayttoohje.md)
 
