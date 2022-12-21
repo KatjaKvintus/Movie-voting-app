@@ -20,7 +20,7 @@
 | 18.12. | 4 | Korjauksia + uusia toimintoja (admin-käyttäjän lisääminen, äänestystoiminto, admin-työkalut, Movie-luokan kasaaminen) | 
 | 19.12. | 4.5 | Arkkitehtuurikuvauksen kirjoittamista, testien kirjoitusta, käyttöliittymän hiomiosta | 
 | 20.12. | 6 | repository-luokkien tekoa, metodien jakoa uusiksi, virheenkorjauksia, sekvenssikaavioiden piirtoa | 
-|  |  |  | 
+| 21.12. | 6 | Sekvensikaavioiden korjauksia, pylint-taskin korjaus, koodin muotoilua pylint-raportin perusteella, testien kirjoitusta, luokkakaavion piirto uusiksi | 
 |  |  |  |
 |  |  |  |
 |  |  |  |
@@ -28,4 +28,4 @@
 |  |  |  |
 |  |  |  |
 
-| yht  55.5  h |   | | 
+| yht  61.5  h |   | | 
