@@ -14,7 +14,7 @@
 
 Ohjelman suoritys käynnistyy hakemiston juuressa olevasta tiedostosta index.py. Muu koodi on jaettu seuraaviin kokonaisuuksiin:
 - entities (luokat AppUser, AdminUser ja Movie: uusien olioiden luominen)
-- functionalities (luokka Movieservice: sovelluksen perustoiminnallisuuden, jotka keskittyvät elokuvaäänestyksen ympärille)
+- functionalities (luokka Movieservice: sisältää sovelluksen perustoiminnallisuudet, jotka keskittyvät elokuvaäänestyksen ympärille)
 - repositories (AppUserRepository, AdminUserRepository, MovieRepository: tiedon pysyväistallennus ja hakeminen)
 
 
