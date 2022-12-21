@@ -1,28 +1,28 @@
 import unittest
-from entities.AppUser import AppUser
+from entities.AppUser import App_User
 
 
 class TestAppUser(unittest.TestCase):
 
 
     def setUp(self):
-        self.user_normal = AppUser("Maija", "Mehiläinen")
-
+        self.user_normal = App_User("Maija", "Mehiläinen")
 
     def test_you_can_create_new_user(self):
-        self.newUser = AppUser("Testaaja", "testi")
+        self.newUser = App_User("Testaaja", "testi")
         self.assertEqual(self.newUser.username, "Testaaja")
     
-
     def test_existing_user_log_in_possible(self):
-        self.existingUser = AppUser("testi1", "testi1")
+        self.existingUser = App_User("testi1", "testi1")
         self.assertEqual(self.existingUser.username, "testi1")
 
+    def test_long_enough_password_will_be_accepted(self):
+        result = App_User.check_password_lenght("thisisreallylongpassword")
+        self.assertAlmostEqual(result, "thisisreallylongpassword")
+    
+    def test_password_with_special_characters_will_be_accepted(self):
+        result = App_User.check_password_lenght("passwordwith#%&()()()()!")
+        self.assertAlmostEqual(result, "passwordwith#%&()()()()!")
 
-    '''
-    def test_too_short_password_will_be_declined(self):
-        result = AppUser.check_username_length("!")
-        self.assertEqual(result, "You chose too short username. It should be at least 3 characters long.")
-    '''
 
 

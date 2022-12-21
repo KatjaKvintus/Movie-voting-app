@@ -1,12 +1,12 @@
 from entities.Movie import Movie
-from repositories.AdminUserRepository import AdminUserRepository
-from repositories.MovieRepository import MovieRepository
-from services.MovieService import MovieService
+from repositories.AdminUserRepository import Admin_User_Repository
+from repositories.MovieRepository import Movie_Repository
+from services.MovieService import Movie_Service
 
 
-class AdminUser():
+class Admin_user():
 
-    
+
     def __init__(self, username, password):
         self.username = username
         self.password = password
@@ -14,27 +14,29 @@ class AdminUser():
 
     def create_new_admin_user():
 
-            # Ask user for a username
-            username = input("Choose admin username (min. 3 characters long:) ")
-            
-            username_is_unique = AdminUser.check_if_username_is_unique(username)
-            username_is_long_enough = AdminUser.check_username_length(username_is_unique)
-            username = username_is_long_enough
-            
-            password = input("Choose password (min. 3 characters long): ")
-            password_is_long_enough = AdminUser.check_password_lenght(password)
-            password = password_is_long_enough 
+        # Ask user for a username
+        username = input("Choose admin username (min. 3 characters long:) ")
 
-            AdminUser.admin_users[username] = password
-            AdminUserRepository.save_new_admin_user_to_file(username, password)     
-            
-            print(f"\nNew admin user created. Remember to send user account cresentials to the new admin. \n")
+        username_is_unique = Admin_user.check_if_username_is_available(username)
+        username_is_long_enough = Admin_user.check_username_length(username_is_unique)
+        username = username_is_long_enough
+
+        password = input("Choose password (min. 3 characters long): ")
+        password_is_long_enough = Admin_user.check_password_lenght(password)
+        password = password_is_long_enough
+
+        Admin_user.admin_users[username] = password
+        Admin_User_Repository.save_new_admin_user_to_file(username, password)
+
+        print(f"\nNew admin user created.")
+        print("Remember to send user account cresentials to the new admin. \n")
 
 
+    # Log in for admin users. Check if username and password match.
     def admin_log_in():
 
         admin_username = input("What is your admin username? ")
-        
+
         # Check is username exists
         username_exists = False
         while True:
@@ -42,17 +44,17 @@ class AdminUser():
             if username_exists:
                 break
 
-            if admin_username not in AdminUserRepository.admin_users:
+            if admin_username not in Admin_User_Repository.admin_users:
                 print("I don't recognize this username. ")
                 admin_username = input("Please give correct admin username: ")
-            
-            if admin_username in AdminUserRepository.admin_users.keys():
+
+            if admin_username in Admin_User_Repository.admin_users:
                 break
-        
-        # Ask for a password and check if those match. If not, keep asking password. 
+
+        # Ask for a password and check if those match. If not, keep asking password.
         password = input("What is your password? ")
 
-        if AdminUserRepository.admin_users[admin_username] != password:
+        if Admin_User_Repository.admin_users[admin_username] != password:
             password_is_correct = False
 
             while True:
@@ -62,16 +64,16 @@ class AdminUser():
                 print("Incorrect password. Please try again. \n")
                 password = input("Password: ")
 
-                if AdminUserRepository.admin_users[admin_username] == password:
-                    password_is_correct = True  
+                if Admin_User_Repository.admin_users[admin_username] == password:
+                    password_is_correct = True
 
             print(f"Welcome, admin {admin_username}!")
             print("")
-            AdminUser.admin_tools()
+            Admin_user.admin_tools()
 
     # Tools menu for admin level users
     def admin_tools():
-        
+
         while True:
 
             print("Choose function:")
@@ -82,26 +84,26 @@ class AdminUser():
             print("  [M]ake new admin user account ")
             print("  [E]xit admin tools \n")
             choice = input("My choice: ")
-        
-            if choice == "E" or choice == "e":
+
+            if choice in ("E", "e"):
                 break
-            elif choice == "P" or choice == "p":
-                MovieService.print_voting_list()
-            elif choice == "C" or choice == "c":
-                MovieRepository.empty_voting_list()
-            elif choice == "R" or choice == "":
+            if choice in("P", "p"):
+                Movie_Service.print_voting_list()
+            elif choice in ("C", "c"):
+                Movie_Repository.empty_voting_list()
+            elif choice in ("R", "r"):
                 Movie.print_movie_suggestion_list()
-            elif choice == "S" or choice == "s":
+            elif choice in ("S", "s"):
                 Movie.admin_set_voting_list()
-            elif choice == "M" or choice == "m":
-                AdminUser.create_new_admin_user()
+            elif choice in ("M", "m"):
+                Admin_user.create_new_admin_user()
             else:
-                print("Pelase choose from the list. ")
+                print("Please choose from the list. \n")
 
 
     # Check if suggester username is already in use among Admin Users
-    def check_if_username_is_unique(username):
-        
+    def check_if_username_is_available(self, username):
+
         username_is_unique = False
 
         while True:
@@ -109,7 +111,7 @@ class AdminUser():
             if username_is_unique:
                 break
 
-            if username in AdminUser.admin_users:
+            if username in Admin_user.admin_users:
                 print("This username is already taken.")
                 username = input("Please choose unique username: ")
                 continue
@@ -119,19 +121,17 @@ class AdminUser():
         return username
 
 
-    def check_username_length(username):
+    def check_username_length(self, username):
         while True:
             if len(username) >= 3:
                 return username
-            else:
-                print("You chose too short username. It should be at least 3 characters long.")
-                username = input("Please choose longer username: ")
+            print("You chose too short username. It should be at least 3 characters long.")
+            username = input("Please choose longer username: ")
 
 
-    def check_password_lenght(password):
+    def check_password_lenght(self, password):
         while True:
             if len(password) >= 3:
                 return password
-            else:
-                print("You chose too short password. It should be at least 3 characters long.")
-                password = input("Please choose longer username: ")
+            print("You chose too short password. It should be at least 3 characters long.")
+            password = input("Please choose longer username: ")

@@ -1,23 +1,23 @@
-from entities.AppUser import AppUser
-from entities.AdminUser import AdminUser
-#from entities.Movie import Movie
-from repositories.AdminUserRepository import AdminUserRepository
-from repositories.AppUserRepository import AppUserRepository
-from repositories.MovieRepository import MovieRepository
+import sys
+from entities.AppUser import App_User
+from entities.AdminUser import Admin_user
+from repositories.AdminUserRepository import Admin_User_Repository
+from repositories.AppUserRepository import App_User_Repository
+from repositories.MovieRepository import Movie_Repository
 
 
 
 def main():
 
-    AppUserRepository.check_and_download_userlist()
-    AdminUserRepository.check_and_download_userlist()
-    MovieRepository.download_movie_lists()
-    
+    # Downloads user list, admin list and list of movies to be voted
+    App_User_Repository.check_and_download_userlist()
+    Admin_User_Repository.check_and_download_admin_userlist()
+    Movie_Repository.download_movie_lists()
 
     start()
 
 
-# Start menu for all users, both regular and admind
+# Start menu for all users, both regular and admin
 def start():
 
     print("Welcome to the movie voting app!\n")
@@ -27,23 +27,23 @@ def start():
         print("Functionalities:")
         print("  [N] Create new user account ")
         print("  [L] Log in as returning user ")
-        print("  [A] Log in as the admin user ") 
+        print("  [A] Log in as the admin user ")
         print("  [X] Close app\n")
         choice = input("My choice: ")
 
-        if choice == "N" or choice == "n":
-            AppUser.create_new_user()
-        elif choice == "L" or choice == "l":
-            AppUser.log_in_returning_user()
-        elif choice == "A" or choice == "a":
-            AdminUser.admin_log_in()
-        elif choice == "X" or choice == "x":
+        if choice in ("N", "n"):
+            App_User.create_new_user()
+        elif choice in ("L", "l"):
+            App_User.log_in_returning_user()
+        elif choice in ("A", "a"):
+            Admin_user.admin_log_in()
+        elif choice in ("X", "x"):
             print("Bye!")
-            exit()
+            sys.exit()
         else:
-            print("Pelase choose from the list. \n")
+            print("Please choose from the list. \n")
 
-   
+
 
 if __name__ == "__main__":
     main()
