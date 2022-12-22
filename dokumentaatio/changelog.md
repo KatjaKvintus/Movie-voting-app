@@ -38,3 +38,12 @@
 	* Aika paljon dokumentaatiosta
 	* tavallisen käyttäjän voisi korottaa adminiksi
 
+### Viikko 7
+
+- Repository-luokkien luominen tiedon pysyväistallennusta varten tehdyille funktioille
+- Testien kirjoitus
+- Käyttöliitymän hiontaa
+- Elokuvan ehdotustoiminto
+- Movie-luokan toiminnot
+- Arkkitehtuurikuvauksen kirjoittaminen
+- Sekvenssikaavioiden piirtoa uusiksi muutosten jälkeen
