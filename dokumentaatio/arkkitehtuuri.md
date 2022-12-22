@@ -2,15 +2,19 @@
 
 ## Rakenne
 
-### Koodin pakkausrakenne:
+### Koodin pakkausrakenne
 
-![](https://github.com/KatjaKvintus/ot-harjoitustyo/blob/master/dokumentaatio/pakkausrakenne.jpg)
+Koodin pakkausrakenne on seuraava:
 
 
+![](https://github.com/KatjaKvintus/ot-harjoitustyo/blob/master/dokumentaatio/Kuvat/pakkausrakenne.jpg)
+
+
+Pakkaus 
 
 ### Luokkakaavio:
 
-![](https://github.com/KatjaKvintus/ot-harjoitustyo/blob/master/dokumentaatio/luokkakaavio.jpg)
+![](https://github.com/KatjaKvintus/ot-harjoitustyo/blob/master/dokumentaatio/Kuvat/luokkakaavio.jpg)
 
 Ohjelman suoritys käynnistyy hakemiston juuressa olevasta tiedostosta index.py. Muu koodi on jaettu seuraaviin kokonaisuuksiin:
 - entities (luokat AppUser, AdminUser ja Movie: uusien olioiden luominen)
@@ -74,29 +78,29 @@ Repositories-kokonaisuus vastaa tiedon pysyväistallennuksesta ja tiedon hakemis
 
 ### Uuden käyttäjän luominen
 
-![](https://github.com/KatjaKvintus/ot-harjoitustyo/blob/master/dokumentaatio/sekvenssikaavio_Creating%20new%20user%20account.jpg)
+![](https://github.com/KatjaKvintus/ot-harjoitustyo/blob/master/dokumentaatio/Kuvat/sekvenssikaavio_Creating%20new%20user%20account.jpg)
 
 
 ### Käyttäjän kirjautuminen
 
-![](https://github.com/KatjaKvintus/ot-harjoitustyo/blob/master/dokumentaatio/sekvenssikaavio_Existing%20user%20log%20in.jpg)
+![](https://github.com/KatjaKvintus/ot-harjoitustyo/blob/master/dokumentaatio/Kuvat/sekvenssikaavio_Existing%20user%20log%20in.jpg)
 
 
 ### Admin-käyttäjän kirjautuminen
 
-![](https://github.com/KatjaKvintus/ot-harjoitustyo/blob/master/dokumentaatio/sekvenssikaavio_Admin%20user%20log%20in.jpg)
+![](https://github.com/KatjaKvintus/ot-harjoitustyo/blob/master/dokumentaatio/Kuvat/sekvenssikaavio_Admin%20user%20log%20in.jpg)
 
 ### Uuden admin-käyttäjän luominen
 
-![](https://github.com/KatjaKvintus/ot-harjoitustyo/blob/master/dokumentaatio/sekvenssikaavio_Creating%20new%20admin%20user%20account.jpg)
+![](https://github.com/KatjaKvintus/ot-harjoitustyo/blob/master/dokumentaatio/Kuvat/sekvenssikaavio_Creating%20new%20admin%20user%20account.jpg)
 
 
 ### Elokuvan äänestäminen
 
-![](https://github.com/KatjaKvintus/ot-harjoitustyo/blob/master/dokumentaatio/sekvenssikaavio_Voting%20for%20a%20movie.jpg)
+![](https://github.com/KatjaKvintus/ot-harjoitustyo/blob/master/dokumentaatio/Kuvat/sekvenssikaavio_Voting%20for%20a%20movie.jpg)
 
 ### Elokuvan ehdottaminen seuraavaa äänestystä varten
 
-![](https://github.com/KatjaKvintus/ot-harjoitustyo/blob/master/dokumentaatio/sekvenssikaavio_Suggesting%20a%20movie.jpg)
+![](https://github.com/KatjaKvintus/ot-harjoitustyo/blob/master/dokumentaatio/Kuvat/sekvenssikaavio_Suggesting%20a%20movie.jpg)
 
 
