@@ -12,8 +12,8 @@ Peruskäyttäjä:
 - voi äänestää yhtä listan elokuvista - TEHTY
 - voi katsoa äänestyksen tilanteen
 Pääkäyttäjä
-- hyväksyy tai hylkää seuraavaan äänestykseen ehdotetun elokuvan 
-- julkaisee listan jolta voi äänestää leffoja
+- hyväksyy tai hylkää seuraavaan äänestykseen ehdotetuT elokuvat - TEHTY
+- julkaisee listan jolta voi äänestää leffoja - TEHTY
 - sulkee äänestyksen ja julkaisee valitun elokuvan
 
 ## Käyttöliittymäluonnos
@@ -29,11 +29,14 @@ Sovelluksen käynnistyessä käyttäjällä on meljä vaihtoehtoa:
   [X] Close app
 
 Käyttäjä valitsee sopivan vaihtoehdon antamalla sitä vastaavan kirjaimen []. Sovellus hyväksyy sekä ison että pienen kirjaimen. Sekä uusi käyttäjä
-että jo aiemmin tilin luonut käyttäjä pääsevät tunnus-salasana -vaiheen jälkeen äänestämään elokuvaa. Admin-kirjautuminen antaa tarjolle admin-työkalut:
+että jo aiemmin tilin luonut käyttäjä pääsevät tunnus-salasana -vaiheen jälkeen äänestämään elokuvaa. 
+
+Admin-kirjautuminen antaa tarjolle admin-työkalut:
   [P]rint current voting list 
   [C]lear voting list 
   [S]et up a new votings list 
   [E]xit admin tools 
+
 
 ## Ennen kirjautumista
 
@@ -51,14 +54,14 @@ Sovelluksen käynnistyessä käyttäjällä on meljä vaihtoehtoa:
 
 Käyttäjä:
   - Käyttäjällä on mahdollisuus äänestää elokuvaa - TEHTY
-  - Käyttäjä voi ehdottaa uuttaa elokuvaa ensi viikon äänestykseen
+  - Käyttäjä voi ehdottaa uuttaa elokuvaa ensi viikon äänestykseen - TEHTY
   - Käyttäjä voi kirjautua ulos järjestelmästä - TEHTY
 
 Admin:
   - Voi tyhjentää elokuvalistan - TEHTY
-  - Voi asettaa uuden äänestyslistan 
+  - Voi asettaa uuden äänestyslistan - TEHTY
   - Voi julkaista äänestyksen voittaneen elokuvan
-  - voi hyväksyä käyttäjän elokuvaehdotuksen osaksi seuraavaa äänestyslistaa
+  - voi hyväksyä käyttäjän elokuvaehdotuksen osaksi seuraavaa äänestyslistaa - TEHTY
 
 ## Jatkokehitysideoita
 
