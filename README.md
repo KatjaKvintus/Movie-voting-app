@@ -1,7 +1,7 @@
 # Movie voting app - leffaillan leffan äänestysappi
 Ohjelmistotekniikka, harjoitustyö
 
-Tällä sovelluksella voi ehdottaa elokuvaa ja äänestää valitusta listasta elokuvaa viikoittaista leffailtaa varten. Apin käyttöä varten tulee luoda käyttäjätili. Peruskäyttäjä voi katsoa elokuvalistan, äänestää elokuvaa ja ehdottaa haluamaansa elokuvaa seuraavaa äänestystä varten. Yksi tai useampi käyttäjä voi olla pääkäyttäjä, jolla on oikeus asettaa äänestettävät elokuvat, luoda uusia admin-käyttäjiö ja sulkea äänestys. 
+Tällä sovelluksella voi ehdottaa elokuvaa ja äänestää valitusta listasta elokuvaa viikoittaista leffailtaa varten. Apin käyttöä varten tulee luoda käyttäjätili. Peruskäyttäjä voi katsoa elokuvalistan, äänestää elokuvaa ja ehdottaa haluamaansa elokuvaa seuraavaa äänestystä varten. Yksi tai useampi käyttäjä voi olla pääkäyttäjä, jolla on oikeus asettaa äänestettävät elokuvat, luoda uusia admin-käyttäjiä ja sulkea äänestys. 
 
 
 ### Dokumentaatio
