@@ -2,19 +2,13 @@
 
 ## Sovelluksen tarkoitus
 
-Tällä sovelluksella voi ehdottaa elokuvaa ja äänestää valitusta listasta elokuvaa viikoittaista leffailtaa varten. 
+Tällä sovelluksella voi ehdottaa elokuvaa ja äänestää valitusta listasta elokuvaa viikoittaista leffailtaa varten. Sovelluksen perimmäinen tarkoitus on tarjota demokraattinen ja matalavolyyminen tapa sopia siitä, mitä elokuvaa katsotaan.
+
 
 ## Käyttäjät
 
-Sovelluksella on kahdenlaisia käyttäjiä: 
-Peruskäyttäjä: 
-- voi ehdottaa elokuvaa seuraavaan äänestykseen - TEHTY
-- voi äänestää yhtä listan elokuvista - TEHTY
-- voi katsoa äänestyksen tilanteen
-Pääkäyttäjä
-- hyväksyy tai hylkää seuraavaan äänestykseen ehdotetuT elokuvat - TEHTY
-- julkaisee listan jolta voi äänestää leffoja - TEHTY
-- sulkee äänestyksen ja julkaisee valitun elokuvan
+Sovelluksella on kahdenlaisia käyttäjiä: peruskäyttäjä ja pääkäyttäjä (admin). Peruskäyttäjäroolilla voi äänestää elokuvaa ja ehdttaa uutta elokuvaa seuraavaan äänestykseen, ja pääkäytäjärooli on puhtaasti hallinnollinen. Pääkäyttäjärooli ei siis tarjoa mahdollisuutta äänestystoimintoon. Tarkoituksena on pitää roolit erillään ja pääkäyttäjällä tulee olla erikseen myös käyttäjäroolin tunnukset, jos hän haluaa osallistua elokuvien äänestämiseen.
+
 
 ## Käyttöliittymäluonnos
 
@@ -22,29 +16,31 @@ Pääkäyttäjä
 
 Kuvasta poiketen sovellus toimii tekstikäyttäliittymällä, ei graafisella. Kuva kuitenkin havainnollistaa sovelluksen ominaisuuksia.
 
-Sovelluksen käynnistyessä käyttäjällä on meljä vaihtoehtoa:
-  [N] Create new user account 
-  [L] Log in as returning user 
-  [A] Log in as the admin user 
-  [X] Close app
+Sovelluksen käynnistyessä käyttäjällä on neljä vaihtoehtoa:
+
+- Create new user account 
+- Log in as returning user 
+- Log in as the admin user 
+- Close app
+  
 
 Käyttäjä valitsee sopivan vaihtoehdon antamalla sitä vastaavan kirjaimen []. Sovellus hyväksyy sekä ison että pienen kirjaimen. Sekä uusi käyttäjä
 että jo aiemmin tilin luonut käyttäjä pääsevät tunnus-salasana -vaiheen jälkeen äänestämään elokuvaa. 
 
 Admin-kirjautuminen antaa tarjolle admin-työkalut:
-  [P]rint current voting list 
-  [C]lear voting list 
-  [S]et up a new votings list 
-  [E]xit admin tools 
+- Print current voting list 
+- Clear voting list 
+- Set up a new votings list 
+- Exit admin tools 
 
 
 ## Ennen kirjautumista
 
 Sovelluksen käynnistyessä käyttäjällä on meljä vaihtoehtoa:
-  [N] Create new user account
-  [L] Log in as returning user
-  [A] Log in as the admin user
-  [X] Close app
+- Create new user account 
+- Log in as returning user 
+- Log in as the admin user 
+- Close app
 
 - Käyttäjä voi luoda järjestelmään käyttäjätilin (käyttäjätunnuksen täytyy olla uniikki ja vähintään 3 merkkiä pitkä - TEHTY
 - Järjestelmään kirjaudutaan tunnuksella ja salanalla. Jos tunnusta ei ole olemassa tai salasana on väärin, siitä tulee virheilmoitus. - TEHTY
