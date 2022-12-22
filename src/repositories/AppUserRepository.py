@@ -43,7 +43,7 @@ class App_User_Repository:
             file.close()
 
 
-    def check_if_file_exists(self, file_path):
+    def check_if_file_exists(file_path):
 
         file_exists = False
 

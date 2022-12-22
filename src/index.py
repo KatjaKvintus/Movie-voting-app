@@ -4,6 +4,7 @@ from entities.AdminUser import Admin_user
 from repositories.AdminUserRepository import Admin_User_Repository
 from repositories.AppUserRepository import App_User_Repository
 from repositories.MovieRepository import Movie_Repository
+from entities.Movie import Movie
 
 
 
@@ -12,7 +13,8 @@ def main():
     # Downloads user list, admin list and list of movies to be voted
     App_User_Repository.check_and_download_userlist()
     Admin_User_Repository.check_and_download_admin_userlist()
-    Movie_Repository.download_movie_lists()
+    Movie.download_movie_voting_list()
+    Movie.download_movie_suggestions_list()
 
     start()
 

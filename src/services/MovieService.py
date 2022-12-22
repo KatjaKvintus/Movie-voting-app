@@ -1,6 +1,7 @@
 from repositories.MovieRepository import Movie_Repository
 
 
+
 class Movie_Service:
 
 
@@ -50,3 +51,6 @@ class Movie_Service:
                 print(f"[{counter}]: {candidate_description}")
                 counter += 1
             print("")
+    
+
+   

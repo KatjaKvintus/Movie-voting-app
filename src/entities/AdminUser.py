@@ -42,6 +42,7 @@ class Admin_user():
         while True:
 
             if username_exists:
+                username_exists = True
                 break
 
             if admin_username not in Admin_User_Repository.admin_users:
@@ -52,9 +53,9 @@ class Admin_user():
                 break
 
         # Ask for a password and check if those match. If not, keep asking password.
-        password = input("What is your password? ")
+        admin_password = input("What is your password? ")
 
-        if Admin_User_Repository.admin_users[admin_username] != password:
+        if Admin_User_Repository.admin_users[admin_username] != admin_password:
             password_is_correct = False
 
             while True:
@@ -62,14 +63,14 @@ class Admin_user():
                     break
 
                 print("Incorrect password. Please try again. \n")
-                password = input("Password: ")
+                admin_password = input("Password: ")
 
-                if Admin_User_Repository.admin_users[admin_username] == password:
+                if Admin_User_Repository.admin_users[admin_username] == admin_password:
                     password_is_correct = True
 
-            print(f"Welcome, admin {admin_username}!")
-            print("")
-            Admin_user.admin_tools()
+        print(f"Welcome, admin {admin_username}!")
+        print("")
+        Admin_user.admin_tools()
 
     # Tools menu for admin level users
     def admin_tools():
@@ -88,13 +89,13 @@ class Admin_user():
             if choice in ("E", "e"):
                 break
             if choice in("P", "p"):
-                Movie_Service.print_voting_list()
+                Movie.print_voting_list_for_admin()
             elif choice in ("C", "c"):
                 Movie_Repository.empty_voting_list()
             elif choice in ("R", "r"):
                 Movie.print_movie_suggestion_list()
             elif choice in ("S", "s"):
-                Movie.admin_set_voting_list()
+                Movie.set_voting_list()
             elif choice in ("M", "m"):
                 Admin_user.create_new_admin_user()
             else:

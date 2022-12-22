@@ -21,11 +21,11 @@
 | 19.12. | 4.5 | Arkkitehtuurikuvauksen kirjoittamista, testien kirjoitusta, käyttöliittymän hiomiosta | 
 | 20.12. | 6 | repository-luokkien tekoa, metodien jakoa uusiksi, virheenkorjauksia, sekvenssikaavioiden piirtoa | 
 | 21.12. | 6 | Sekvensikaavioiden korjauksia, pylint-taskin korjaus, koodin muotoilua pylint-raportin perusteella, testien kirjoitusta, luokkakaavion piirto uusiksi | 
-|  |  |  |
+| 22.12. | 6 | Virheiden korjauksia, sekvenssikaavioiden päivitystä, testausta, muutama metodi lisää |
 |  |  |  |
 |  |  |  |
 |  |  |  |
 |  |  |  |
 |  |  |  |
 
-| yht  61.5  h |   | | 
+| yht  67.5  h |   | | 

@@ -12,17 +12,64 @@ class Movie():
         self.votes = 0
 
 
-    # This is for testing only
-    '''
-    test_movie_1 = Movie("The Shawshank Redemption", "1994")
-    MovieRepository.list_of_movies_to_be_voted.append(test_movie_1)
-    test_movie_2 = Movie("The Godfather", "1972")
-    MovieRepository.list_of_movies_to_be_voted.append(test_movie_2)
-    test_movie_3 = Movie("The Dark Knight", "2008")
-    MovieRepository.list_of_movies_to_be_voted.append(test_movie_3)
-    test_movie_4 = Movie("The Godfather: Part II", "1974")
-    MovieRepository.list_of_movies_to_be_voted.append(test_movie_4)
-    '''
+    # Downloads from a file the voting list (that keeps track of given votes during )
+    def download_movie_voting_list():
+
+        current_voting_list_file_exists = False
+
+        while not current_voting_list_file_exists:
+
+            #movieapp_voting_list = "repositories/voting_list.txt" #PALAUTA ENNEN KUIN JULKAISET!!!!
+            movieapp_voting_list = "/home/kvintus/ot-harjoitustyo/src/repositories/voting_list.txt"
+
+            try:
+                # Test if file exists
+                with open(movieapp_voting_list) as testfile:
+                    current_voting_list_file_exists = True
+                    testfile.close()
+
+            except OSError:
+                print("Error: movie list not found.")
+                sys.exit()
+
+        # Read file and save movies list_of_movies_to_be_voted list
+        with open(movieapp_voting_list) as file:
+            for row in file:
+                row = row.replace("\n", "")
+                movie_details = row.split(",")
+                new_movie = Movie(movie_details[0], movie_details[1])
+                Movie_Repository.list_of_movies_to_be_voted.append(new_movie)
+            file.close()
+    
+
+    # Downloads from a file the voting list (that keeps track of given votes during )
+    def download_movie_suggestions_list():
+
+        current_voting_list_file_exists = False
+
+        while not current_voting_list_file_exists:
+
+            #movieapp_voting_list = "repositories/voting_suggestions.txt" #PALAUTA ENNEN KUIN JULKAISET!!!!
+            movieapp_suggestions_list = "/home/kvintus/ot-harjoitustyo/src/repositories/voting_suggestions.txt"
+
+            try:
+                # Test if file exists
+                with open(movieapp_suggestions_list) as testfile:
+                    current_voting_list_file_exists = True
+                    testfile.close()
+
+            except OSError:
+                print("Error: movie list not found.")
+                sys.exit()
+
+        # Read file and save movies list_of_movies_to_be_voted list
+        with open(movieapp_suggestions_list) as file:
+            for row in file:
+                row = row.replace("\n", "")
+                movie_details = row.split(",")
+                new_movie = Movie(movie_details[0], movie_details[1])
+                Movie_Repository.list_of_movie_suggestions.append(new_movie)
+            file.close()
 
 
     # Movie basic functionalities for user
@@ -61,12 +108,18 @@ class Movie():
             else:
                 print("Please choose from the list. ")
 
-    def get_movie_name(self, movie):
+
+    def get_movie_name(movie):
         return movie.movie_name
 
 
-    def movie_to_string(self, movie):
-        return "{movie.movie_name} (published in {movie.publish_year}"
+    def get_publish_year(movie):
+        return movie.publish_year
+
+
+    def movie_to_string(movie):
+        description = Movie.get_movie_name(movie) + " (published in " + Movie.get_publish_year(movie) + ")"
+        return description
 
 
     # User can vote for a movie by giving number 1-4.
@@ -128,16 +181,18 @@ class Movie():
         print("Thank you for your suggestion!\n")
 
 
-# For admin: set up a list of 4 movies for next vote. Admin can add movies of their choice
+    # For admin: set up a list of 4 movies for next vote. Admin can add movies of their choice
     # or pick max 4 suggestions from movie suggestion list.
     def set_voting_list():
 
         max_amount_of_movies_to_be_added = 4
         setting_successfull = False
 
+        movie_voting_list_length = len(Movie_Repository.list_of_movies_to_be_voted)
+
         if len(Movie_Repository.list_of_movies_to_be_voted) > 0:
-            print("Empty the current list before creating new")
-            choice = input("Do you want to empty old list? [Y]es or [N]o: ")
+            print("You need to empty the current list before creating a new list. ")
+            choice = input("Do you want to empty old list? Press [Y]es or [N]o: ")
 
             if choice in ("Y", "y"):
                 Movie_Repository.empty_voting_list
@@ -147,34 +202,111 @@ class Movie():
 
         movies_added = 0
 
-        print("Would you like to add something from the suggestions list?\n")
-        choice1 = input("Choose below: ")
-        print("  [Y]es, show me the list")
-        print("  [N]o \n")
+        # If there is movie suggestions available, suggest admin to look at them before adding movies
+        if len(Movie_Repository.list_of_movie_suggestions) > 0:
 
-        while True:
-            if choice1 in ("Y", "y"):
-                Movie_Repository.print_movie_suggestion_list()
-                print()
-                choice2 = print("If you want to add any of these, type the movie number. If not, press [X].\n")
-
-                if len(Movie_Repository.print_movie_suggestion_list) <= choice2 > 0:
-                    add_this_movie_to_be_voted = Movie_Repository.list_of_movie_suggestions[int(choice2) - 1]
-                    Movie_Repository.list_of_movies_to_be_voted.append(add_this_movie_to_be_voted)
-                    movies_added += 1
-                elif choice2 in ("X", "x"):
-                    break
-
-        while movies_added < max_amount_of_movies_to_be_added:
-            movie_name = input(f"Write movie no {movies_added + 1} name: ")
-            publish_year = input("Publish year: ")
+            print(f"Movie suggestions list has {len(Movie_Repository.list_of_movie_suggestions)} suggestion(s) available.")
+            print("Would you like to see the list before adding any movies for vote? \n")
+        
+            choice1 = input("If you do, press [Y] - if not, press [Ń]:")
             print()
-            new_movie = Movie(movie_name, publish_year)
-            Movie_Repository.list_of_movies_to_be_voted.append(new_movie)
-            movies_added += 1
 
-        Movie_Repository.save_voting_list_to_file()
+            while True:
+                if choice1 in ("Y", "y"):
+                    Movie.print_movie_suggestion_list()
+                    print()
+                    
+                    print("If you want to add one of these for voting, press [A].")
+                    if len(Movie_Repository.list_of_movie_suggestions) <= 4:
+                        print("If you want to add all to the voting list, press [Z].")
+                    print("If not, press [X].\n")
 
-        setting_successfull = True
-        print("\ņSetting movie list succesfull.\n")
-        return setting_successfull
+                    choice2 = input("I choose: ")
+                    print()
+
+                    if choice2 in ("A", "a"):
+                        number = input("Which movie do you want to add? Give the number of the movie.")
+
+                        while True:
+                            if int(number) < len(Movie_Repository.list_of_movie_suggestions) and int(number) > 0:
+                                add_this_movie = Movie_Repository.list_of_movie_suggestions[int(number) - 1]
+                                Movie_Repository.list_of_movies_to_be_voted.append(add_this_movie)
+                                Movie_Repository.save_voting_list_to_file(add_this_movie.movie_to_string())
+                                Movie_Repository.list_of_movie_suggestions.pop(int(number))
+                                movies_added += 1
+                                break
+                            else:
+                                print("I didn't recognise that. Please give the number of the movie you want to add.")
+                            
+
+                    elif choice2 in ("Z", "z"):
+                        for suggestion in Movie_Repository.list_of_movie_suggestions:
+                            Movie_Repository.list_of_movies_to_be_voted.append(suggestion)
+                            Movie_Repository.save_voting_list_to_file(suggestion.toString())
+                            Movie_Repository.list_of_movie_suggestions.clear()
+                        break
+                    
+                    elif choice2 in ("X", "x"):
+                        break
+                    else:
+                        print("I didn't recognise that. Please give the number of the movie you want to add.")
+
+        movie_spots_left = 4 - len(Movie_Repository.list_of_movies_to_be_voted)
+
+        if movie_spots_left > 0:
+
+            print(f"You can add {movie_spots_left} movies. Choose wisely! \n")
+
+            movies_listed = ""
+
+            while movies_added < max_amount_of_movies_to_be_added:
+                movie_name = input(f"Write movie no {movies_added + 1} name: ")
+                publish_year = input("Publish year: ")
+                new_movie = Movie(movie_name, publish_year)
+                Movie_Repository.list_of_movies_to_be_voted.append(new_movie)
+                movies_listed = movie_name + "," + publish_year + ";"
+                movies_added += 1
+                print()
+
+            Movie_Repository.save_voting_list_to_file(movies_listed)
+            print()
+            setting_successfull = True
+            print("Setting movie list succesfull.\n")
+            return setting_successfull
+        
+        else:
+            print("Movie voting list is now full. ")
+
+
+    # Prints a list of movies if it is available. 
+    def print_voting_list_for_admin():
+
+        if len(Movie_Repository.list_of_movies_to_be_voted) == 0:
+            print("The movie list is empty.\n")
+        else:
+            counter = 1
+            print("The movie list for this weeks vote is: ")
+
+            for movie in Movie_Repository.list_of_movies_to_be_voted:
+                candidate_description = Movie.movie_to_string(movie) 
+                print(f"[{counter}]: {candidate_description}")
+                counter += 1
+            print("")
+
+    # Prints the current movie suggestions list
+    def print_movie_suggestion_list():
+
+        if len(Movie_Repository.list_of_movie_suggestions) == 0:
+            print("Suggestion list is empty. \n")
+        else:
+            counter = 1
+            print("The suggestions are: ")
+
+            for movie in Movie_Repository.list_of_movie_suggestions:
+                candidate_description = Movie.movie_to_string(movie)
+                print(f"[{counter}]: {candidate_description}")
+                counter += 1
+            print("")
+
+
+    

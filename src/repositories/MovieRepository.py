@@ -1,37 +1,11 @@
 import sys
 
 
+
 class Movie_Repository:
 
     list_of_movies_to_be_voted = []
     list_of_movie_suggestions = []
-
-
-    # Downloads from a file the voting list (that keeps track of given votes during )
-    def download_movie_lists():
-
-        current_voting_list_file_exists = False
-
-        while not current_voting_list_file_exists:
-
-            #movieapp_voting_list = "repositories/voting_list.txt" #PALAUTA ENNEN KUIN JULKAISET!!!!
-            movieapp_voting_list = "/home/kvintus/ot-harjoitustyo/src/repositories/voting_list.txt"
-
-            try:
-                # Test if file exists
-                with open(movieapp_voting_list) as testfile:
-                    current_voting_list_file_exists = True
-
-            except OSError:
-                print("Error: movie list not found.")
-                sys.exit()
-
-        # Read file and save movies list_of_movies_to_be_voted list
-        with open(movieapp_voting_list) as file:
-            for movie in file:
-                Movie_Repository.list_of_movies_to_be_voted.append(movie)
-
-            file.close()
 
 
     # Return "open" or "closed" depending on if the voting is open or not
@@ -53,7 +27,6 @@ class Movie_Repository:
                 print("Error: voting status not found.")
                 sys.exit()
 
-        # Read file and save movies list_of_movies_to_be_voted list
         with open(movieapp_voting_status) as file:
             for row in file:
                 status_now = row
@@ -79,35 +52,24 @@ class Movie_Repository:
         file.close()
 
 
-    # Prints the current movie suggestions list
-    def print_movie_suggestion_list():
 
-        if len(Movie_Repository.list_of_movie_suggestions) == 0:
-            print("Suggestion list is empty. \n")
-        else:
-            counter = 1
-            print("The suggestions are: ")
-
-            for movie in Movie_Repository.list_of_movie_suggestions:
-                candidate_description = movie.movie_to_string()
-                print(f"[{counter}]: {candidate_description}")
-                counter += 1
-            print("")
-
-
-    def save_voting_list_to_file():
+    def save_voting_list_to_file(movie_list_as_text):
         # Save movies to voting_list.txt
+
+        individual_movies = movie_list_as_text.split(";")
+
         with open("voting_list.txt", "a") as file:
-            for movie in Movie_Repository.list_of_movies_to_be_voted:
-                file.write(movie.movie_name + "," + movie.publish_year)
+            for item in individual_movies:
+                file.write(item)
                 file.write("\n")
             file.close()
+
 
     # For admin: empty movie voting list
     def empty_voting_list():
         Movie_Repository.list_of_movies_to_be_voted.clear()
-        empty_the_text_file = open("repositories/voting_list.txt", 'w')
-        empty_the_text_file.close()
+        open("repositories/voting_list.txt", 'w').close()
+
         return "Voting list is now empty.\n"
 
     # For admin: empty movie suggestion list
