@@ -36,7 +36,7 @@ class App_User_Repository:
             return True
 
 
-    def save_new_user_to_file(self, username, password):
+    def save_new_user_to_file(username, password):
         with open("movieapp_users.txt", "a") as file:
             file.write(username + "," + password)
             file.write("\n")

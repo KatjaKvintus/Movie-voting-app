@@ -73,7 +73,7 @@ class App_User:
 
 
     # Check if suggester username is already in use among AppUsers
-    def check_if_username_is_available(self, username):
+    def check_if_username_is_available(username):
 
         username_is_unique = False
 
@@ -92,7 +92,7 @@ class App_User:
 
 
     # If username length is >= 3, returns username. If not, asks again.
-    def check_username_length(self, username):
+    def check_username_length(username):
         while True:
             if len(username) >= 3:
                 return username
@@ -101,7 +101,7 @@ class App_User:
 
 
     # If password length is >= 3, returns password. If not, asks again.
-    def check_password_lenght(self, password):
+    def check_password_lenght(password):
         while True:
             if len(password) >= 3:
                 return password

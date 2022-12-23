@@ -1,3 +1,6 @@
 Titanic,1997
 Sherry Otter,2023
 Hagrid,2023
+toimia,2020
+Itse ilkimys,2020
+Home alone,1990

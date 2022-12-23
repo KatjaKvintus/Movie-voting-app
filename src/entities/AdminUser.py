@@ -82,6 +82,7 @@ class Admin_user():
             print("  [C]lear voting list ")
             print("  [R]ead suggestions for next weeks movie voting ")
             print("  [S]et up a new votings list ")
+            print("  [K] Check voting status (all votes given to the movies)")
             print("  [M]ake new admin user account ")
             print("  [E]xit admin tools \n")
             choice = input("My choice: ")
@@ -96,6 +97,8 @@ class Admin_user():
                 Movie.print_movie_suggestion_list()
             elif choice in ("S", "s"):
                 Movie.set_voting_list()
+            elif choice in ("K", "k"):
+                Movie_Service.count_votes()
             elif choice in ("M", "m"):
                 Admin_user.create_new_admin_user()
             else:
@@ -103,7 +106,7 @@ class Admin_user():
 
 
     # Check if suggester username is already in use among Admin Users
-    def check_if_username_is_available(self, username):
+    def check_if_username_is_available( username):
 
         username_is_unique = False
 
@@ -122,7 +125,7 @@ class Admin_user():
         return username
 
 
-    def check_username_length(self, username):
+    def check_username_length(username):
         while True:
             if len(username) >= 3:
                 return username
@@ -130,7 +133,7 @@ class Admin_user():
             username = input("Please choose longer username: ")
 
 
-    def check_password_lenght(self, password):
+    def check_password_lenght(password):
         while True:
             if len(password) >= 3:
                 return password

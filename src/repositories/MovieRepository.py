@@ -8,7 +8,7 @@ class Movie_Repository:
     list_of_movie_suggestions = []
 
 
-    # Return "open" or "closed" depending on if the voting is open or not
+    # Returns "open" or "closed" depending on if the voting is open or not, or ""
     def check_voting_status():
 
         current_voting_list_file_exists = False
@@ -30,14 +30,13 @@ class Movie_Repository:
         with open(movieapp_voting_status) as file:
             for row in file:
                 status_now = row
-
             file.close()
 
         return status_now
 
 
     # The vote, given by user, is saved to a file.
-    def save_movie_vote(self, movie_name):
+    def save_movie_vote(movie_name):
 
         with open("repositories/votes.txt", "a") as file:
             file.write(movie_name + "\n")
@@ -58,37 +57,41 @@ class Movie_Repository:
 
         individual_movies = movie_list_as_text.split(";")
 
-        with open("voting_list.txt", "a") as file:
+        with open("repositories/voting_list.txt", "a") as file:
             for item in individual_movies:
                 file.write(item)
                 file.write("\n")
-            file.close()
+        
+        file.close()
 
 
     # For admin: empty movie voting list
     def empty_voting_list():
         Movie_Repository.list_of_movies_to_be_voted.clear()
         open("repositories/voting_list.txt", 'w').close()
-
-        return "Voting list is now empty.\n"
+        print ("Voting list is now empty.\n")
 
     # For admin: empty movie suggestion list
     def empty_suggestion_list():
         Movie_Repository.list_of_movie_suggestions.clear()
-        empty_the_text_file = open("repositories/voting_suggestions.txt", 'w')
-        empty_the_text_file.close()
-        return "Suggestions list is now empty.\n"
+        open("repositories/voting_suggestions.txt", 'w').close()
+        print ("Suggestions list is now empty.\n")
 
     # For admin: empties the file that keep track of given votes
     def clear_all_votes():
-        Movie_Repository.list_of_movie_suggestions.clear()
-        empty_the_text_file = open("repositories/voting_suggestions.txt", 'w')
-        empty_the_text_file.close()
-        return "All votes wiped out.\n"
+        open("repositories/voting_suggestions.txt", 'w').close()
+        print("All votes wiped out.\n")
 
     # For admin: close voting
     def close_voting():
         with open("voting_status.txt", "w") as file:
             file.write("closed")
+            file.write("\n")
+        file.close()
+    
+    # For admin: set voting status message when winning movie is known
+    def set_voting_status_message_as_winner_movie(movie_name):
+        with open("voting_status.txt", "w") as file:
+            file.write(f"The voting has ended! Next movie nigh movie is {movie_name")
             file.write("\n")
         file.close()

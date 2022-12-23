@@ -37,10 +37,10 @@ Admin-kirjautuminen antaa tarjolle admin-työkalut:
 ## Ennen kirjautumista
 
 Sovelluksen käynnistyessä käyttäjällä on meljä vaihtoehtoa:
-- Create new user account 
-- Log in as returning user 
-- Log in as the admin user 
-- Close app
+- Create new user account (luo uusi käyttäjä)
+- Log in as returning user (kirjaudu sisään vanhana käyttäjänä)
+- Log in as the admin user (kirjaudu sisään pääkäyttäjänä)
+- Close app (sulje sovellus)
 
 - Käyttäjä voi luoda järjestelmään käyttäjätilin (käyttäjätunnuksen täytyy olla uniikki ja vähintään 3 merkkiä pitkä - TEHTY
 - Järjestelmään kirjaudutaan tunnuksella ja salanalla. Jos tunnusta ei ole olemassa tai salasana on väärin, siitä tulee virheilmoitus. - TEHTY
@@ -67,3 +67,5 @@ Perusversion jälkeen sovellukseen voisi lisätä mm. seuraavat ominaisuudet
 - Chat, jossa voi keskustella leffavalinnoista, ja pääkäyttäjälle editointioikeudet siihen
 - Tilasto aiemmista äänestyksistä
 - Mahdollisuus poistaa käyttäjätunnus (joko itse tai sitten pääkäyttäjä heittää käyttäjän ulos)
+- Äänestystilanteen laskemismetodin jatkojalostus niin, että se tunnistaa tasapelitilanteet
+- 

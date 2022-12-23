@@ -36,10 +36,11 @@ class Movie():
         with open(movieapp_voting_list) as file:
             for row in file:
                 row = row.replace("\n", "")
-                movie_details = row.split(",")
-                new_movie = Movie(movie_details[0], movie_details[1])
-                Movie_Repository.list_of_movies_to_be_voted.append(new_movie)
-            file.close()
+                if len(row) > 0:
+                    movie_details = row.split(",")
+                    new_movie = Movie(movie_details[0], movie_details[1])
+                    Movie_Repository.list_of_movies_to_be_voted.append(new_movie)
+        file.close()
     
 
     # Downloads from a file the voting list (that keeps track of given votes during )
@@ -80,8 +81,10 @@ class Movie():
 
         if voting_status == "open":
             print("This weeks movie vote is open!\n")
-        else:
+        elif voting_status == "closed":
             print("Unfortunately there is no ongoing movie voting right now.")
+        else:
+            print(voting_status)
 
 
         while True:
@@ -102,7 +105,7 @@ class Movie():
             elif answer in ("S", "s"):
                 Movie_Service.print_voting_list()
             elif answer in ("V", "v"):
-                Movie.suggest_a_movie()
+                Movie.vote_for_movie()
             elif answer in ("P","p"):
                 Movie.suggest_a_movie()
             else:
@@ -134,7 +137,7 @@ class Movie():
             vote = input("My vote (write number): ")
 
             if vote.isnumeric and int(vote) >= 1 and int(vote) <= 4:
-                the_movie = Movie_Repository.list_of_movies_to_be_voted[vote - 1].get_movie_name()
+                the_movie = Movie_Repository.list_of_movies_to_be_voted[int(vote) - 1].get_movie_name()
 
                 Movie_Repository.save_movie_vote(the_movie)
                 print("Thank you for voting! \n")
@@ -212,6 +215,7 @@ class Movie():
             print()
 
             while True:
+
                 if choice1 in ("Y", "y"):
                     Movie.print_movie_suggestion_list()
                     print()
@@ -250,6 +254,8 @@ class Movie():
                         break
                     else:
                         print("I didn't recognise that. Please give the number of the movie you want to add.")
+                else:
+                    break
 
         movie_spots_left = 4 - len(Movie_Repository.list_of_movies_to_be_voted)
 
@@ -264,7 +270,7 @@ class Movie():
                 publish_year = input("Publish year: ")
                 new_movie = Movie(movie_name, publish_year)
                 Movie_Repository.list_of_movies_to_be_voted.append(new_movie)
-                movies_listed = movie_name + "," + publish_year + ";"
+                movies_listed += movie_name + "," + publish_year + ";"
                 movies_added += 1
                 print()
 
@@ -292,6 +298,7 @@ class Movie():
                 print(f"[{counter}]: {candidate_description}")
                 counter += 1
             print("")
+
 
     # Prints the current movie suggestions list
     def print_movie_suggestion_list():
