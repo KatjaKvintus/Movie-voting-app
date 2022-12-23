@@ -3,6 +3,8 @@ from repositories.AppUserRepository import App_User_Repository
 
 
 class App_User:
+    """ Class responsible for creating nre user accounts and providing tools for users.
+    """
 
 
     # The class constructor for creating new users
@@ -12,7 +14,11 @@ class App_User:
         self.has_voted = False
 
 
+    
     def create_new_user():
+        """Create new user. Ask asks the user for a username and password as input.
+        Username has to be unique (not in use among other users) and at least 3 characters long. 
+        """
 
         username = input("Choose username (min. 3 characters long:) ")
 
@@ -33,8 +39,11 @@ class App_User:
         Movie.welcome_to_movieapp()
 
 
-    # Check returning users username and password
+    
     def log_in_returning_user():
+        """ Check returning users username and password. Username has to be created
+        previously and password has to match username.
+        """
 
         username = input("What is your username? ")
 
@@ -72,9 +81,10 @@ class App_User:
         Movie.welcome_to_movieapp()
 
 
-    # Check if suggester username is already in use among AppUsers
+    
     def check_if_username_is_available(username):
-
+        """Verification function: check if suggester username is already in use among AppUsers.
+        """
         username_is_unique = False
 
         while True:
@@ -91,8 +101,10 @@ class App_User:
         return username
 
 
-    # If username length is >= 3, returns username. If not, asks again.
+    
     def check_username_length(username):
+        """ If username length is >= 3, returns username. If not, asks again.
+        """
         while True:
             if len(username) >= 3:
                 return username
@@ -100,8 +112,10 @@ class App_User:
             username = input("Please choose longer username: ")
 
 
-    # If password length is >= 3, returns password. If not, asks again.
+    
     def check_password_lenght(password):
+        """If password length is >= 3, returns password. If not, asks again.
+        """
         while True:
             if len(password) >= 3:
                 return password

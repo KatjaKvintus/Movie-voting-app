@@ -3,7 +3,6 @@ from entities.AppUser import App_User
 from entities.AdminUser import Admin_user
 from repositories.AdminUserRepository import Admin_User_Repository
 from repositories.AppUserRepository import App_User_Repository
-from repositories.MovieRepository import Movie_Repository
 from entities.Movie import Movie
 
 

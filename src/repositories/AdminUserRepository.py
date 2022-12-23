@@ -38,7 +38,7 @@ class Admin_User_Repository:
                 file.close()
 
     # Read file and save new user to admin_users dictionary
-    def save_new_admin_user_to_file(self,username, password):
+    def save_new_admin_user_to_file(username, password):
         with open("movieapp_admin_users.txt", "a") as file:
             file.write(username + "," + password)
             file.write("\n")

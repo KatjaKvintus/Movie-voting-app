@@ -5,18 +5,16 @@ class App_User_Repository:
     #def __init__(self, username, password):
      #   None
 
-
     all_users = {}
+    
 
-
-
-    # Check if userlist is available and if it is, download and save users to a dictionary
     def check_and_download_userlist():
+        """Check if userlist is available and if it is, downloads and save users to a dictionary.
+        """
 
         userlist_file_exists = False
 
-        #movieapp_userlist = "repositories/movieapp_users.txt"       PALAUTA ENNEN KUIN JULKAISET!!!!
-        movieapp_userlist = "/home/kvintus/ot-harjoitustyo/src/repositories/movieapp_users.txt"
+        movieapp_userlist = "repositories/movieapp_users.txt"
 
         while not userlist_file_exists:
             if App_User_Repository.check_if_file_exists(movieapp_userlist):
@@ -37,6 +35,8 @@ class App_User_Repository:
 
 
     def save_new_user_to_file(username, password):
+        """Saves new user account details to a file
+        """
         with open("movieapp_users.txt", "a") as file:
             file.write(username + "," + password)
             file.write("\n")
@@ -44,6 +44,8 @@ class App_User_Repository:
 
 
     def check_if_file_exists(file_path):
+        """Verification function to check if file path is correct
+        """
 
         file_exists = False
 

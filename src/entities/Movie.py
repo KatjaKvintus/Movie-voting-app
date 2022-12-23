@@ -12,8 +12,9 @@ class Movie():
         self.votes = 0
 
 
-    # Downloads from a file the voting list (that keeps track of given votes during )
     def download_movie_voting_list():
+        """ Downloads from a file the voting list (that keeps track of given votes).
+        """
 
         current_voting_list_file_exists = False
 
@@ -43,8 +44,9 @@ class Movie():
         file.close()
     
 
-    # Downloads from a file the voting list (that keeps track of given votes during )
     def download_movie_suggestions_list():
+        """Downloads from a file the voting list (that keeps track of given votes)
+        """
 
         current_voting_list_file_exists = False
 
@@ -73,11 +75,11 @@ class Movie():
             file.close()
 
 
-    # Movie basic functionalities for user
     def welcome_to_movieapp():
+        """Basic functionalities menu for user.
+        """
 
         voting_status = Movie_Repository.check_voting_status()
-
 
         if voting_status == "open":
             print("This weeks movie vote is open!\n")
@@ -94,8 +96,8 @@ class Movie():
             if voting_status == "open":
                 print("  [S]ee movie voting list")
                 print("  [V]ote for a movie ")
-                print("  [P]ropose a movie for nex weeks vote")
-                print("  [E]xit app \n")
+            print("  [P]ropose a movie for nex weeks vote")
+            print("  [E]xit app \n")
 
             answer = input("Answer by giving a letter: ")
 
@@ -125,8 +127,10 @@ class Movie():
         return description
 
 
-    # User can vote for a movie by giving number 1-4.
+    
     def vote_for_movie():
+        """User can vote for a movie by giving a number between 1 and 4.
+        """
 
         print("")
         print("This weeks candidates: ")
@@ -148,6 +152,9 @@ class Movie():
 
 
     def suggest_a_movie():
+        """ Functionality for user: suggesta as movie for next vote. Admin user can add 
+        the suggestions to voting list.
+        """
 
         print("You can suggest one movie for next weeks voting.")    
         print("App admin(s) will decide, if this movie is worthy.\n")
@@ -184,31 +191,34 @@ class Movie():
         print("Thank you for your suggestion!\n")
 
 
-    # For admin: set up a list of 4 movies for next vote. Admin can add movies of their choice
-    # or pick max 4 suggestions from movie suggestion list.
+
     def set_voting_list():
+        """For admin: set up a list of 4 movies for next vote. Admin can add movies 
+        of their choice or pick max 4 suggestions from movie suggestion list.
+        """
 
         max_amount_of_movies_to_be_added = 4
         setting_successfull = False
 
         movie_voting_list_length = len(Movie_Repository.list_of_movies_to_be_voted)
 
-        if len(Movie_Repository.list_of_movies_to_be_voted) > 0:
+        if movie_voting_list_length > 0:
             print("You need to empty the current list before creating a new list. ")
-            choice = input("Do you want to empty old list? Press [Y]es or [N]o: ")
+            choice = input("Do you want to empty the old list now? Press [Y]es or [N]o: ")
 
             if choice in ("Y", "y"):
                 Movie_Repository.empty_voting_list
             elif choice in ("N", "n"):
                 print("Can't add any more movies right now.")
-                return setting_successfull
+
 
         movies_added = 0
+        suggestions_amount = len(Movie_Repository.list_of_movie_suggestions)
 
-        # If there is movie suggestions available, suggest admin to look at them before adding movies
+        # If there is/are movie suggestion(s) available, suggest admin to look at them before adding movies
         if len(Movie_Repository.list_of_movie_suggestions) > 0:
 
-            print(f"Movie suggestions list has {len(Movie_Repository.list_of_movie_suggestions)} suggestion(s) available.")
+            print(f"Movie suggestions list has {suggestions_amount} suggestion(s) available.")
             print("Would you like to see the list before adding any movies for vote? \n")
         
             choice1 = input("If you do, press [Y] - if not, press [Ń]:")
@@ -241,7 +251,6 @@ class Movie():
                                 break
                             else:
                                 print("I didn't recognise that. Please give the number of the movie you want to add.")
-                            
 
                     elif choice2 in ("Z", "z"):
                         for suggestion in Movie_Repository.list_of_movie_suggestions:
@@ -256,6 +265,7 @@ class Movie():
                         print("I didn't recognise that. Please give the number of the movie you want to add.")
                 else:
                     break
+
 
         movie_spots_left = 4 - len(Movie_Repository.list_of_movies_to_be_voted)
 
@@ -284,8 +294,9 @@ class Movie():
             print("Movie voting list is now full. ")
 
 
-    # Prints a list of movies if it is available. 
     def print_voting_list_for_admin():
+        """Prints a list of movies if it is available.
+        """
 
         if len(Movie_Repository.list_of_movies_to_be_voted) == 0:
             print("The movie list is empty.\n")
@@ -300,8 +311,9 @@ class Movie():
             print("")
 
 
-    # Prints the current movie suggestions list
     def print_movie_suggestion_list():
+        """Prints the current movie suggestions list
+        """
 
         if len(Movie_Repository.list_of_movie_suggestions) == 0:
             print("Suggestion list is empty. \n")

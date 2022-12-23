@@ -5,10 +5,9 @@ from repositories.MovieRepository import Movie_Repository
 class Movie_Service:
 
 
-    
-    # Reads votes.txt file, counts votes for each movie, empties the file
-    # and return the name of the winning movie.
     def count_votes():
+        """Reads votes.txt file, counts votes for each movie, empties the file
+        and return the name of the winning movie."""
 
         final_votes = {}
 
@@ -32,23 +31,31 @@ class Movie_Service:
         return result
 
 
-    # For admin: check movie voting status
+    
     def check_voting_list_status():
+        """ For admin: check movie voting status. Option to continue closing voting and announcing winner.
+        """
 
         top_movie = Movie_Service.count_votes()
+        top_movie = top_movie.replace("\n", "")
         print(f"The movie with most votes right now is {top_movie}.")
         choice = input("Do you want to close woting and announce the winner? [Y]es or [N]o: ")
 
         if choice in ("Y", "y"):
             Movie_Repository.empty_voting_list()
             Movie_Repository.clear_all_votes()
+            Movie_Repository.list_of_movies_to_be_voted.clear()
             Movie_Repository.set_voting_status_message_as_winner_movie(top_movie)
+
+            
         elif choice in ("N", "n"):
             print("Remember to close the voting in time before movie night.\n")
 
-    # Prints a list of movies if it is available. If not available, it tells user to
-    # try again later.
+    
     def print_voting_list():
+        """ Prints a list of movies if it is available. If not available, it tells user to
+        try again later.
+        """
 
         if len(Movie_Repository.list_of_movies_to_be_voted) == 0:
             print("Unfortunatelyt the movie list is empty." 
@@ -63,5 +70,3 @@ class Movie_Service:
                 counter += 1
             print("")
     
-
-   

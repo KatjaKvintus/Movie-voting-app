@@ -13,8 +13,10 @@ class Admin_user():
 
 
     def create_new_admin_user():
+        """ Creating a new admin user. Need to have a unique username that is at least 3 characters long.
+        Note: this function does not inform new admin user. The creator has to do it manually.
+        """
 
-        # Ask user for a username
         username = input("Choose admin username (min. 3 characters long:) ")
 
         username_is_unique = Admin_user.check_if_username_is_available(username)
@@ -32,8 +34,8 @@ class Admin_user():
         print("Remember to send user account cresentials to the new admin. \n")
 
 
-    # Log in for admin users. Check if username and password match.
     def admin_log_in():
+        """ Log in for admin users. Check if username and password match."""
 
         admin_username = input("What is your admin username? ")
 
@@ -52,7 +54,6 @@ class Admin_user():
             if admin_username in Admin_User_Repository.admin_users:
                 break
 
-        # Ask for a password and check if those match. If not, keep asking password.
         admin_password = input("What is your password? ")
 
         if Admin_User_Repository.admin_users[admin_username] != admin_password:
@@ -72,8 +73,12 @@ class Admin_user():
         print("")
         Admin_user.admin_tools()
 
-    # Tools menu for admin level users
+
+    
     def admin_tools():
+        """Tools menu for admin level users. Admin can create new admin user, check voting status and 
+        handle movie related lists and files.
+        """
 
         while True:
 
@@ -82,7 +87,7 @@ class Admin_user():
             print("  [C]lear voting list ")
             print("  [R]ead suggestions for next weeks movie voting ")
             print("  [S]et up a new votings list ")
-            print("  [K] Check voting status (all votes given to the movies)")
+            print("  [K] Check voting status ")
             print("  [M]ake new admin user account ")
             print("  [E]xit admin tools \n")
             choice = input("My choice: ")
@@ -98,15 +103,16 @@ class Admin_user():
             elif choice in ("S", "s"):
                 Movie.set_voting_list()
             elif choice in ("K", "k"):
-                Movie_Service.count_votes()
+                Movie_Service.check_voting_list_status()
             elif choice in ("M", "m"):
                 Admin_user.create_new_admin_user()
             else:
                 print("Please choose from the list. \n")
 
 
-    # Check if suggester username is already in use among Admin Users
     def check_if_username_is_available( username):
+        """Check if suggested username is already in use among Admin Users.
+        """
 
         username_is_unique = False
 

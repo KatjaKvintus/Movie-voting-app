@@ -46,6 +46,7 @@ Sovelluksen käynnistyessä käyttäjällä on meljä vaihtoehtoa:
 - Järjestelmään kirjaudutaan tunnuksella ja salanalla. Jos tunnusta ei ole olemassa tai salasana on väärin, siitä tulee virheilmoitus. - TEHTY
 - Admin-käyttäjälle on määritelty omat työkalut - TEHTY
 
+
 ## Kirjautumisen jälkeen
 
 Käyttäjä:
@@ -58,6 +59,7 @@ Admin:
   - Voi asettaa uuden äänestyslistan - TEHTY
   - Voi julkaista äänestyksen voittaneen elokuvan
   - voi hyväksyä käyttäjän elokuvaehdotuksen osaksi seuraavaa äänestyslistaa - TEHTY
+
 
 ## Jatkokehitysideoita
 
