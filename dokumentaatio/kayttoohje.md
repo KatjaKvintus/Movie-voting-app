@@ -1,6 +1,7 @@
 # Käyttöohje
 
-Lataa projektin viimeisimmän releasen lähdekoodi valitsemalla Assets-osion alta Souce code.
+Lataa projektin viimeisimmän releasen lähdekoodi valitsemalla Assets-osion alta 'Source code'.
+
 
 
 ## Ohjelman käynnistäminen
@@ -18,7 +19,8 @@ Käynnistettäessä sovellus tarjoaa valikon, jossa on tarjolla seuraavat vaihto
 - Log in as the admin user (Kirjaudu sisään pääkäyttäjänä)
 - Close app (Sulje sovellus)
 
-Valikosta valitaan vaihtoehto kirjoittamalla halutun vaihtoehdon hakasuluilla [] merkitty kirjain (kirjaimet eivät näy tässä ohjeessa, koska GitHub hämmentyyhakasuluista). Sovellus hyväksyy sekä pienet että suuret kirjaimet.
+Valikosta valitaan vaihtoehto kirjoittamalla halutun vaihtoehdon hakasuluilla [] merkitty kirjain (kirjaimet eivät näy tässä ohjeessa, koska GitHub hämmentyy hakasuluista). Sovellus hyväksyy sekä pienet että suuret kirjaimet.
+
 
 
 ## Käyttäjätilin luominen
@@ -95,14 +97,3 @@ Jos ääniä ei ole vielä annettu, sovellus kertoo tämän.
 "Make new admin user account" -toiminnolla pääkäyttäjä voi luoda toisen pääkäyttäjän. Jos annettu tunnus on jo käytössä, sovellus huomauttaa siitä ja kehottaa keksimään uniikimman tunnuksen. Myös salasanan tulee olla vähintään 3 merkkiä pitkä. Sekä tunnus että salasana voivat sisältää kirjainten lisäksi myös numeroita ja erikoismerkkejä.
 
 "Exit admin tools" -toiminto palauttaa pääkäyttäjän takaisin sovelluksen alkuvalikkoon. 
-
-
-
-
-
-
-
-
-
-
-
