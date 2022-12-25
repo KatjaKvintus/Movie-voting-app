@@ -124,7 +124,7 @@ Käyttäjä saapuu toimintovalikkoon (movie menu) ja valitsee toimintovalikosta 
 ## Ohjelman rakenteeseen jääneet heikkoudet
 
 
-## Käyttöliittymä
+### Käyttöliittymä
 
 Sovelluksen käytettävyys parantuisi heti, jos sen päivittäisi graafiseen käyttöliittymään. Tämä tulisikin pyrkiä tekemään versioon 2.0.
 
@@ -132,15 +132,14 @@ Sovelluksesta puuttuu myös funktio, joka laskisi kunkin elokuvan saamat äänet
 
 
 
-
-## Tietojen tallennus
+### Tietojen tallennus
 
 Tiedot tallennetaan tällä hetkellä paikallisesti tekstitiedostoon, jonka seurauksena yksi äänestävä ryhmä voi äänestää vain yhdellä laitteella vuorotellen. Versioon 2.0. Tietojen tallennus tulisi siirtä pilveen ja siirtyä tekstitiedostoista tietokantatauluihin.
 
 Sovellus ei myöskään tallenna elokuvan äänestämisen yhteydessä äänestäjän käyttäjätunnusta, jonka seurauksena yksittäinen käyttäjä voi halutessaan äänestää monta kertaa.
 
 
-## Koodi
+### Koodi
 
 Tämän ensimmäisen version koodissa on paljon turhaa toistoa. Sen sijaan, että jokaiselle luettavalle ja muokattavalle txt-tiedostolle on omat funktionsa päivitystä ja tyhjennystä varten, olisi järkevää tehdä kolme funktiota: yksi tiedoston lukemiseen, toinen tiedon lisäämiseen tiedoston loppuun ja kolmas päällekirjoittamiseen. Kukin funktio saisi parametrina muokkauksen kohteen ja tarvittaessa myös lisättävän/päällekirjoitettavan tiedon.
 
