@@ -1,7 +1,7 @@
 from entities.Movie import Movie
-from repositories.AdminUserRepository import Admin_User_Repository
-from repositories.MovieRepository import Movie_Repository
-from services.MovieService import Movie_Service
+from repositories.Admin_User_Repository import Admin_User_Repository
+from repositories.Movie_Repository import Movie_Repository
+from services.Movie_Service import Movie_Service
 
 
 class Admin_user():
@@ -13,8 +13,9 @@ class Admin_user():
 
 
     def create_new_admin_user():
-        """ Creating a new admin user. Need to have a unique username that is at least 3 characters long.
-        Note: this function does not inform new admin user. The creator has to do it manually.
+        """ Creating a new admin user. Need to have a unique username that is at least
+        3 characters long. Note: this function does not inform new admin user.
+        The creator has to do it manually.
         """
 
         username = input("Choose admin username (min. 3 characters long:) ")
@@ -27,15 +28,16 @@ class Admin_user():
         password_is_long_enough = Admin_user.check_password_lenght(password)
         password = password_is_long_enough
 
-        Admin_user.admin_users[username] = password
+        Admin_User_Repository.admin_users[username] = password
         Admin_User_Repository.save_new_admin_user_to_file(username, password)
 
-        print(f"\nNew admin user created.")
+        print("\nNew admin user created.")
         print("Remember to send user account cresentials to the new admin. \n")
 
 
     def admin_log_in():
-        """ Log in for admin users. Check if username and password match."""
+        """ Log in for admin users. Check if username and password match.
+        """
 
         admin_username = input("What is your admin username? ")
 
@@ -74,10 +76,9 @@ class Admin_user():
         Admin_user.admin_tools()
 
 
-    
     def admin_tools():
-        """Tools menu for admin level users. Admin can create new admin user, check voting status and 
-        handle movie related lists and files.
+        """Tools menu for admin level users. Admin can create new admin user, 
+        check voting status and handle movie related lists and files.
         """
 
         while True:
@@ -121,12 +122,11 @@ class Admin_user():
             if username_is_unique:
                 break
 
-            if username in Admin_user.admin_users:
+            if username in Admin_User_Repository.admin_users:
                 print("This username is already taken.")
                 username = input("Please choose unique username: ")
                 continue
-            else:
-                username_is_unique = True
+            username_is_unique = True
 
         return username
 

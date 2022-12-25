@@ -1,3 +1,4 @@
 admin,supersecretpassword
 admin2,admin2
 muumi,peikko
+niisku,neiti

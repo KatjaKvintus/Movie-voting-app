@@ -14,13 +14,11 @@ class Admin_User_Repository:
 
         while not admin_userlist_file_exists:
 
-            # PALAUTA ENNEN KUIN JULKAISET!!!!
-            #movieapp_admin_userlist = "repositories/movieapp_admin_users.txt"
-            movieapp_admin_userlist = "/home/kvintus/ot-harjoitustyo/src/repositories/movieapp_admin_users.txt"
+            movieapp_admin_userlist = "src/repositories/movieapp_admin_users.txt"
 
             try:
                 # Test if file exists
-                with open(movieapp_admin_userlist) as testfile:
+                with open(movieapp_admin_userlist, encoding="utf-8") as testfile:
                     admin_userlist_file_exists = True
 
             except OSError:
@@ -28,7 +26,7 @@ class Admin_User_Repository:
                 sys.exit()
 
             # Read file and save admin users to all_users dictionary
-            with open(movieapp_admin_userlist) as file:
+            with open(movieapp_admin_userlist, encoding="utf-8") as file:
                 for line in file:
                     userdata = line.split(",")
                     username = str.strip(userdata[0])
@@ -39,7 +37,7 @@ class Admin_User_Repository:
 
     # Read file and save new user to admin_users dictionary
     def save_new_admin_user_to_file(username, password):
-        with open("movieapp_admin_users.txt", "a") as file:
+        with open("src/repositories/movieapp_admin_users.txt", "a", encoding="utf-8") as file:
             file.write(username + "," + password)
             file.write("\n")
             file.close()

@@ -6,7 +6,7 @@ class App_User_Repository:
      #   None
 
     all_users = {}
-    
+
 
     def check_and_download_userlist():
         """Check if userlist is available and if it is, downloads and save users to a dictionary.
@@ -14,7 +14,7 @@ class App_User_Repository:
 
         userlist_file_exists = False
 
-        movieapp_userlist = "repositories/movieapp_users.txt"
+        movieapp_userlist = "src/repositories/movieapp_users.txt"
 
         while not userlist_file_exists:
             if App_User_Repository.check_if_file_exists(movieapp_userlist):
@@ -22,7 +22,7 @@ class App_User_Repository:
 
 
         # Read file and save users to all_users dictionary
-        with open(movieapp_userlist) as file:
+        with open(movieapp_userlist, encoding="utf-8") as file:
             for line in file:
                 userdata = line.split(",")
                 username = str.strip(userdata[0])
@@ -37,7 +37,7 @@ class App_User_Repository:
     def save_new_user_to_file(username, password):
         """Saves new user account details to a file
         """
-        with open("movieapp_users.txt", "a") as file:
+        with open("src/repositories/movieapp_users.txt", "a", encoding="utf-8") as file:
             file.write(username + "," + password)
             file.write("\n")
             file.close()
@@ -55,6 +55,6 @@ class App_User_Repository:
                     file_exists = True
 
             except OSError:
-                print("Error: file not found.")
+                print("Error: THIS file not found.")
 
         return file_exists

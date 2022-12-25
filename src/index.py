@@ -1,8 +1,8 @@
 import sys
-from entities.AppUser import App_User
-from entities.AdminUser import Admin_user
-from repositories.AdminUserRepository import Admin_User_Repository
-from repositories.AppUserRepository import App_User_Repository
+from entities.App_User import App_User
+from entities.Admin_User import Admin_user
+from repositories.Admin_User_Repository import Admin_User_Repository
+from repositories.App_User_Repository import App_User_Repository
 from entities.Movie import Movie
 
 

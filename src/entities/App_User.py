@@ -1,5 +1,5 @@
 from entities.Movie import Movie
-from repositories.AppUserRepository import App_User_Repository
+from repositories.App_User_Repository import App_User_Repository
 
 
 class App_User:
@@ -14,10 +14,10 @@ class App_User:
         self.has_voted = False
 
 
-    
+
     def create_new_user():
         """Create new user. Ask asks the user for a username and password as input.
-        Username has to be unique (not in use among other users) and at least 3 characters long. 
+        Username has to be unique (not in use among other users) and at least 3 characters long.
         """
 
         username = input("Choose username (min. 3 characters long:) ")
@@ -39,7 +39,7 @@ class App_User:
         Movie.welcome_to_movieapp()
 
 
-    
+
     def log_in_returning_user():
         """ Check returning users username and password. Username has to be created
         previously and password has to match username.
@@ -81,7 +81,7 @@ class App_User:
         Movie.welcome_to_movieapp()
 
 
-    
+
     def check_if_username_is_available(username):
         """Verification function: check if suggester username is already in use among AppUsers.
         """
@@ -101,7 +101,7 @@ class App_User:
         return username
 
 
-    
+
     def check_username_length(username):
         """ If username length is >= 3, returns username. If not, asks again.
         """
@@ -112,7 +112,7 @@ class App_User:
             username = input("Please choose longer username: ")
 
 
-    
+
     def check_password_lenght(password):
         """If password length is >= 3, returns password. If not, asks again.
         """

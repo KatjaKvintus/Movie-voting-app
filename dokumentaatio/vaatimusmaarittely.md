@@ -66,8 +66,9 @@ Admin:
 Perusversion jälkeen sovellukseen voisi lisätä mm. seuraavat ominaisuudet
 - Mahdollisuus katsoa äänestystilanne ilman kirjautumista (ns. vieraskäyttäjä-status, apin käyttö ilman käyttäjätiliä)
 - Käyttäjä: vaihtaa mielipidettä eli perua aiemman äänestyksen ja äänestää uudelleen
+- Käyttäjä: mahdolisuus katsoa äänestystilanne (kuinka monta ääntä kukin leffa on saanut)
 - Chat, jossa voi keskustella leffavalinnoista, ja pääkäyttäjälle editointioikeudet siihen
 - Tilasto aiemmista äänestyksistä
 - Mahdollisuus poistaa käyttäjätunnus (joko itse tai sitten pääkäyttäjä heittää käyttäjän ulos)
 - Äänestystilanteen laskemismetodin jatkojalostus niin, että se tunnistaa tasapelitilanteet
-- 
+
