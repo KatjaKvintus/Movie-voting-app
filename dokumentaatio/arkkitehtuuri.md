@@ -64,6 +64,8 @@ Jos käyttäjä kirjautuu sovellukseen admin-käyttäjänä, hänellä on käyt�
 -	Luo uusi admin-käyttäjätili (“Make new admin user account”)
 -	Poistu admin-työkaluista (”Exit admin tools”)
 
+Luokkien funktiot on koottu erilliseen [listaan](https://github.com/KatjaKvintus/movie-voting-app/blob/master/dokumentaatio/funktiolista.md), joka selventää rakennetta.
+
 
 ## Sovelluslogiikka
 
