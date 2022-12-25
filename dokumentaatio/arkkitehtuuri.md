@@ -14,25 +14,24 @@ Pakkaus
 
 ### Luokkakaavio:
 
-![]()
+![](https://github.com/KatjaKvintus/ot-harjoitustyo/blob/master/dokumentaatio/Kuvat/luokkakaavio.jpg)
 
 Ohjelman suoritys käynnistyy hakemiston juuressa olevasta tiedostosta index.py. Muu koodi on jaettu seuraaviin kokonaisuuksiin:
-- entities (luokat AppUser, AdminUser ja Movie: uusien olioiden luominen)
-- functionalities (luokka Movieservice: sisältää sovelluksen perustoiminnallisuudet, jotka keskittyvät elokuvaäänestyksen ympärille)
-- repositories (AppUserRepository, AdminUserRepository, MovieRepository: tiedon pysyväistallennus ja hakeminen)
+- entities (luokat App_User, Admin_User ja Movie: uusien olioiden luominen ja niihin liittyvät toiminnallisuudet)
+- services (luokka Movieservice: sisältää sovelluksen perustoiminnallisuudet, jotka keskittyvät elokuvaäänestyksen ympärille)
+- repositories (App_User_Repository, Admin_User_Repository, Movie_Repository: tiedon pysyväistallennus ja hakeminen)
 
 
 ## Käyttöliittymä
 
-Sovelluksessa on tekstikäyttöliittymä. Luokkia on 5:
--	AppUser (käsittelee käyttäjätilien toiminnot)
+Sovelluksessa on tekstikäyttöliittymä. Luokkia on 7:
+-	App_User (käsittelee käyttäjätilien toiminnot)
+-	Admin_user (käsittelee pääkäyttäjätileihin liittyvät toiminnot)
 -	Movie (käsittelee leffoihin liittyvät toiminnot)
--	AppUserServices (käyttäjätilen oheismetodit)
 -	MovieServices  (elokuvatoimintojen toiminnot)
--	AdminUserServices (admin-käyttäjien oheistoiminnot)
-- AppUserRepository (käyttäjiin liittyvän tiedon pysyväistallennus)
-- AdminUserRepository (admin-käyttäjiin liittyvän tiedon pysyväistallennus)
-- MovieRepository (elokuviin liittyvän tiedon pysyväistallennus)
+- App_User_Repository (käyttäjiin liittyvän tiedon pysyväistallennus)
+- Admin_User_Repository (admin-käyttäjiin liittyvän tiedon pysyväistallennus)
+- Movie_Repository (elokuviin liittyvän tiedon pysyväistallennus)
 
 Kun käyttäjä avaa sovelluksen, hänellä on kolme vaihtoehtoa:
 -	Luo uusi käyttäjätili (”Create new user account”)
@@ -41,10 +40,9 @@ Kun käyttäjä avaa sovelluksen, hänellä on kolme vaihtoehtoa:
 -	sulje sovellus (”Close app”)
 
 Kun uusi käyttäjä on luonut käyttäjätilin (uniikki käyttäjätunnus, kelvollinen salasana) tai vanha käyttäjä on kirjautunut sisään (käyttäjätunnus löytyy, salasana mätsää käyttäjätunnukseen), sovellus kertoo käyttäjälle äänestysstatuksen, joka on yksi seuraavista:
--	Äänestys on auki ja voit äänestää – tässä leffalista ja tämänhetkinen äänestystilanne
--	Äänestys on auki, mutta olet jo äänestänyt – tässä äänestystilanne
+-	Äänestys on auki ja voit äänestää – tässä leffalista
 -	Äänestys on suljettu, mutta valittua elokuvaa ei ole vielä julkaistu
--	Äänestys on suljettu ja seuraava leffailta on xx.xx. klo xx ja leffana on xxx
+-	Äänestys on suljettu ja seuraava leffaillan leffa on {elokuvan_nimi}
 
 Ylläolevista vaihtoehdoista riippuen käyttäjällä on käytössä seuraavat toiminnot:
 -	Äänestä elokuvaa (”Vote for a movie”)
@@ -52,19 +50,18 @@ Ylläolevista vaihtoehdoista riippuen käyttäjällä on käytössä seuraavat t
 -	sulje sovellus (”Close app”)
 
 Jos käyttäjä kirjautuu sovellukseen admin-käyttäjänä, hänellä on käytössään seuraavat vaihtoehdot:
--	(Näytä auki olevan äänestyksen elokuvalista (”Print current voting list”)
+-	Näytä auki olevan äänestyksen elokuvalista (”Print current voting list”)
 -	Tyhjennä äänestyslista (”Clear voting list”)
 -	Katso seuraavaan äänestykseen ehdotetut elokuvat (”Read suggestions for next weeks movie voting”)
 -	Aseta äänestyslista uutta äänestystä varten (”Set up a new votings list”)
+-	Tarkista, mikä elokuva johtaa äänestystä ("Check voting status ")
 -	Luo uusi admin-käyttäjätili (“Make new admin user account”)
--	Sulje äänestys (”Close voting”)
--	Julkaise voittajaelokuva (”Publish winner movie”)
 -	Poistu admin-työkaluista (”Exit admin tools”)
 
 
 ## Sovelluslogiikka
 
-Luokat AppUser ja AdminUser kuvaavat käyttäjiä ja käyttäjien toimintoja. Movie-luokka käsittelee elokuvien äänestyksen, äänestyslistojen luomisen ja uuden elokuvan ehdottamisen. MovieServices-luokka sisältää ne toiminnallisuudet, jotka keskittyvät elokuvaäänestyksen ympärille. Repositories-kokonaisuus vastaa tiedon pysyväistallennuksesta ja tiedon hakemisesta.
+Luokat App_User ja Admin_User kuvaavat käyttäjiä (tavallinen käyttjä, pääkäyttäjä) ja käyttäjien toimintoja. Movie-luokka käsittelee elokuvien äänestyksen, äänestyslistojen luomisen ja uuden elokuvan ehdottamisen. MovieS_ervices-luokka sisältää ne toiminnallisuudet, jotka keskittyvät elokuvaäänestyksen ympärille. Repositories-kokonaisuus vastaa tiedon pysyväistallennuksesta ja tiedon hakemisesta.
 
 
 ## Tietojen pysyväistallennus
@@ -78,19 +75,28 @@ Repositories-kokonaisuus vastaa tiedon pysyväistallennuksesta ja tiedon hakemis
 
 ### Uuden käyttäjän luominen
 
+Sovelluksen aloitusvalikosta valitaan "Create new user account", jonka jälkeen käyttäjä antaa syötteenä halutun käyttäjätunnuksen ja salasanan. Sovellus tarkistaa, ettei käyttäjätunnus ole jo käytössä, ja että sekä käyttäjätunnus että salasana ovat vähintään 3 merkin mittaisia. Tämän jälkeen sovellus näyttää käyttäjälle toimintovalikon (movie menu). 
+
 ![](https://github.com/KatjaKvintus/ot-harjoitustyo/blob/master/dokumentaatio/Kuvat/sekvenssikaavio_Creating%20new%20user%20account.jpg)
 
 
 ### Käyttäjän kirjautuminen
+
+Sovelluksen aloitusvalikosta valitaan "Log in as returning user", jonka jälkeen käyttäjä antaa käyttäjätunnuksen ja salasanan. Sovellus tarkistaa, että käyttäjätunnus on varmasti jo rekisteröity, ja että käyttäjätunnus ja salasana vastaavat sovelluksen muistissa olevia. Tämän jälkeen sovellus näyttää käyttäjälle toimintovalikon (movie menu). 
 
 ![](https://github.com/KatjaKvintus/ot-harjoitustyo/blob/master/dokumentaatio/Kuvat/sekvenssikaavio_Existing%20user%20log%20in.jpg)
 
 
 ### Admin-käyttäjän kirjautuminen
 
+Sovelluksen aloitusvalikosta valitaan Log in as the admin user, jonka jälkeen käyttäjä antaa käyttäjätunnuksen ja salasanan. Sovellus tarkistaa, että käyttäjätunnus on varmasti jo rekisteröity, ja että käyttäjätunnus ja salasana vastaavat sovelluksen muistissa olevia. Tämän jälkeen sovellus näyttää käyttäjälle pääkäyttäjän toimintovalikon (admin menu). 
+
 ![](https://github.com/KatjaKvintus/ot-harjoitustyo/blob/master/dokumentaatio/Kuvat/sekvenssikaavio_Admin%20user%20log%20in.jpg)
 
+
 ### Uuden admin-käyttäjän luominen
+
+Pääkäyttäjä kirjautuu sovelluksen aloitustavalikosta pääkäyttäjänä (ks. ed. kohta) ja valitsee admin-valikosta "Create new admin user". Sen jälkeen käyttäjä antaa syötteenä halutun admin-käyttäjätunnuksen ja admin-salasanan. Sovellus tarkistaa, ettei käyttäjätunnus ole jo käytössä, ja että sekä käyttäjätunnus että salasana ovat vähintään 3 merkin mittaisia. Tämän jälkeen sovellus näyttää käyttäjälle taas pääkäyttäjän toimintovalikon (admin menu).
 
 ![](https://github.com/KatjaKvintus/ot-harjoitustyo/blob/master/dokumentaatio/Kuvat/sekvenssikaavio_Creating%20new%20admin%20user%20account.jpg)
 
@@ -98,6 +104,7 @@ Repositories-kokonaisuus vastaa tiedon pysyväistallennuksesta ja tiedon hakemis
 ### Elokuvan äänestäminen
 
 ![](https://github.com/KatjaKvintus/ot-harjoitustyo/blob/master/dokumentaatio/Kuvat/sekvenssikaavio_Voting%20for%20a%20movie.jpg)
+
 
 ### Elokuvan ehdottaminen seuraavaa äänestystä varten
 
