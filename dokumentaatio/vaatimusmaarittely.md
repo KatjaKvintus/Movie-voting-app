@@ -18,30 +18,30 @@ Alkuperäisestä suunnitelmasta poiketen sovellukseen tuli graafisen käyttölii
 
 Sovelluksen käynnistyessä käyttäjällä on neljä vaihtoehtoa:
 
-- Create new user account 
-- Log in as returning user 
-- Log in as the admin user 
-- Close app
+- Create new user account - TEHTY
+- Log in as returning user - TEHTY
+- Log in as the admin user - TEHTY
+- Close app - TEHTY
  
 
 Käyttäjä valitsee sopivan vaihtoehdon antamalla sitä vastaavan kirjaimen. Sovellus hyväksyy sekä ison että pienen kirjaimen. Sekä uusi käyttäjä että jo aiemmin tilin luonut käyttäjä pääsevät tunnus-salasana -vaiheen jälkeen äänestämään elokuvaa. 
 
 Admin-kirjautuminen antaa tarjolle admin-työkalut:
-- Print current voting list 
-- Clear voting list 
-- Read suggestions for next weeks movie voting
-- Set up a new votings list 
-- Make new admin user account
-- Exit admin tools 
+- Print current voting list - TEHTY
+- Clear voting list - TEHTY
+- Read suggestions for next weeks movie voting - TEHTY
+- Set up a new votings list - TEHTY
+- Make new admin user account - TEHTY
+- Exit admin tools - TEHTY
 
 
 ## Ennen kirjautumista
 
 Sovelluksen käynnistyessä käyttäjällä on meljä vaihtoehtoa:
-- Create new user account (luo uusi käyttäjä)
-- Log in as returning user (kirjaudu sisään vanhana käyttäjänä)
-- Log in as the admin user (kirjaudu sisään pääkäyttäjänä)
-- Close app (sulje sovellus)
+- Create new user account (luo uusi käyttäjä) - TEHTY
+- Log in as returning user (kirjaudu sisään vanhana käyttäjänä) - TEHTY
+- Log in as the admin user (kirjaudu sisään pääkäyttäjänä) - TEHTY
+- Close app (sulje sovellus) - TEHTY
 
 - Käyttäjä voi luoda järjestelmään käyttäjätilin (käyttäjätunnuksen täytyy olla uniikki ja vähintään 3 merkkiä pitkä - TEHTY
 - Järjestelmään kirjaudutaan tunnuksella ja salanalla. Jos tunnusta ei ole olemassa tai salasana on väärin, siitä tulee virheilmoitus. - TEHTY
