@@ -21,7 +21,9 @@ Testauksesta vastaavat luokat on nimetty testauksen kohteena olevien luokkien mu
 
 ### Testauskattavuus
 
-Käyttöliittymäkerrosta lukuunottamatta sovelluksen testauksen haarautumakattavuus on 
+Käyttöliittymäkerrosta lukuunottamatta sovelluksen testauksen haarautumakattavuus on 23 %.
+
+![](https://github.com/KatjaKvintus/movie-voting-app/blob/master/dokumentaatio/Kuvat/Coverage%20report%202022-12-25.png)
 
 ## Järjestelmätestaus
 
