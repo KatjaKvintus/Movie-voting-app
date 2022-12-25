@@ -10,7 +10,7 @@ Tällä sovelluksella voi ehdottaa elokuvaa ja äänestää valitusta listasta e
 Sovelluksella on kahdenlaisia käyttäjiä: peruskäyttäjä ja pääkäyttäjä (admin). Peruskäyttäjäroolilla voi äänestää elokuvaa ja ehdttaa uutta elokuvaa seuraavaan äänestykseen, ja pääkäytäjärooli on puhtaasti hallinnollinen. Pääkäyttäjärooli ei siis tarjoa mahdollisuutta äänestystoimintoon. Tarkoituksena on pitää roolit erillään ja pääkäyttäjällä tulee olla erikseen myös käyttäjäroolin tunnukset, jos hän haluaa osallistua elokuvien äänestämiseen.
 
 
-## Käyttöliittymäluonnos
+## Käyttöliittymä
 
 Alkuperäisestä suunnitelmasta poiketen sovellukseen tuli graafisen käyttöliittymän sijaan tekstikäyttöliittymä. Kaavio alla pyrkii havainnollistamaan käyttöliittymän logiikkaa.
 
@@ -69,7 +69,7 @@ Perusversion jälkeen sovellukseen voisi lisätä mm. seuraavat ominaisuudet
 - Käyttäjä: vaihtaa mielipidettä eli perua aiemman äänestyksen ja äänestää uudelleen
 - Käyttäjä: mahdolisuus katsoa äänestystilanne (kuinka monta ääntä kukin leffa on saanut)
 - Chat, jossa voi keskustella leffavalinnoista, ja pääkäyttäjälle editointioikeudet siihen
-- Tilasto aiemmista äänestyksistä
+- Tilasto aiemmista äänestyksistä ja niiden tuloksista
 - Mahdollisuus poistaa käyttäjätunnus (joko itse tai sitten pääkäyttäjä heittää käyttäjän ulos)
 - Äänestystilanteen laskemismetodin jatkojalostus niin, että se tunnistaa tasapelitilanteet
 - Tietojen pysyväistallennus pilveen niin, että sovellusta voisi käyttää useammalta laitteelta
