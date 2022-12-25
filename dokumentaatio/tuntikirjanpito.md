@@ -26,4 +26,4 @@
 | 25.12. | 7 | Virheiden korjauksia, testausta, dokumentaation päivitys, testausdokumentin kirjoitus |
 
 
-| yht  80.5  h |   | | 
+| yht  79.5  h |   | | 
