@@ -24,11 +24,16 @@ Ohjelman suoritys käynnistyy hakemiston juuressa olevasta tiedostosta index.py.
 
 ## Käyttöliittymä
 
-Sovelluksessa on tekstikäyttöliittymä. Luokkia on 7:
+Alkuperäiset suunnitelmat graafisesta käyttöliittymästä kaatuivat koodarin taitotasoon. Alla oleva kaavio pyrkii esittämään sovelluksen päätoiminnallisuudet tekstikäyttöliittymänä:
+
+![](https://github.com/KatjaKvintus/ot-harjoitustyo/blob/master/dokumentaatio/Kuvat/K%C3%A4ytt%C3%B6liittym%C3%A4_final.JPG)
+
+
+Luokkia on 7:
 -	App_User (käsittelee käyttäjätilien toiminnot)
 -	Admin_user (käsittelee pääkäyttäjätileihin liittyvät toiminnot)
 -	Movie (käsittelee leffoihin liittyvät toiminnot)
--	MovieServices  (elokuvatoimintojen toiminnot)
+-	Movie_Services  (elokuvatoimintojen toiminnot)
 - App_User_Repository (käyttäjiin liittyvän tiedon pysyväistallennus)
 - Admin_User_Repository (admin-käyttäjiin liittyvän tiedon pysyväistallennus)
 - Movie_Repository (elokuviin liittyvän tiedon pysyväistallennus)
