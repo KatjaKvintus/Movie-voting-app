@@ -47,3 +47,6 @@
 - Movie-luokan toiminnot
 - Arkkitehtuurikuvauksen kirjoittaminen
 - Sekvenssikaavioiden piirtoa uusiksi muutosten jälkeen
+- Testausdokumentin kirjoittaminen
+- Käyttöliittymäkaavion piirto uusiksi
+- README-päivitys
