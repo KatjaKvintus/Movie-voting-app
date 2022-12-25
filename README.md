@@ -22,11 +22,17 @@ python3 --version
 - [Changelog](https://github.com/KatjaKvintus/ot-harjoitustyo/blob/master/dokumentaatio/changelog.md)
 - [Arkkitehtuurikuvaus](https://github.com/KatjaKvintus/ot-harjoitustyo/blob/master/dokumentaatio/arkkitehtuuri.md)
 - [Testausdokumentti](https://github.com/KatjaKvintus/ot-harjoitustyo/blob/master/dokumentaatio/testaus.md)
-- [Release 1](https://github.com/KatjaKvintus/ot-harjoitustyo/releases/tag/viikko5)
-- [Release 2](https://github.com/KatjaKvintus/ot-harjoitustyo/releases/tag/viikko6)
-- [Release 3]() PUUTTUU!!!
+
 - [Tuntikirjanpito](https://github.com/KatjaKvintus/ot-harjoitustyo/blob/master/dokumentaatio/tuntikirjanpito.md)
 
+### Release
+
+[Final release](https://github.com/KatjaKvintus/movie-voting-app/releases/tag/viikko7)
+
+
+Aiemmat:
+- [Release 1](https://github.com/KatjaKvintus/ot-harjoitustyo/releases/tag/viikko5)
+- [Release 2](https://github.com/KatjaKvintus/ot-harjoitustyo/releases/tag/viikko6)
 
 
 ### Asennus
