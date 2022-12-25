@@ -10,7 +10,8 @@ Koodin pakkausrakenne on seuraava:
 ![](https://github.com/KatjaKvintus/ot-harjoitustyo/blob/master/dokumentaatio/Kuvat/pakkausrakenne.jpg)
 
 
-Pakkaus 
+Pakkaus repositories vastaa tiedon hakemisesta ja tallennuksesta, entities käyttäjä- ja elokuvaobjektien toiminnallisuudesta ja services elokuva-luokan palveluista.
+
 
 ### Luokkakaavio:
 
@@ -24,7 +25,7 @@ Ohjelman suoritys käynnistyy hakemiston juuressa olevasta tiedostosta index.py.
 
 ## Käyttöliittymä
 
-Alkuperäiset suunnitelmat graafisesta käyttöliittymästä kaatuivat koodarin taitotasoon. Alla oleva kaavio pyrkii esittämään sovelluksen päätoiminnallisuudet tekstikäyttöliittymänä:
+[Alkuperäiset suunnitelmat graafisesta käyttöliittymästä](https://github.com/KatjaKvintus/ot-harjoitustyo/blob/master/dokumentaatio/Kuvat/K%C3%A4ytt%C3%B6liittym%C3%A4_alustava%20suunnitelma.JPG) kaatuivat koodarin taitotasoon. Alla oleva kaavio pyrkii esittämään sovelluksen päätoiminnallisuudet tekstikäyttöliittymänä:
 
 ![](https://github.com/KatjaKvintus/ot-harjoitustyo/blob/master/dokumentaatio/Kuvat/K%C3%A4ytt%C3%B6liittym%C3%A4_final.JPG)
 
@@ -120,3 +121,29 @@ Käyttäjä saapuu toimintovalikkoon (movie menu) ja valitsee toimintovalikosta 
 ![](https://github.com/KatjaKvintus/ot-harjoitustyo/blob/master/dokumentaatio/Kuvat/sekvenssikaavio_Suggesting%20a%20movie.jpg)
 
 
+## Ohjelman rakenteeseen jääneet heikkoudet
+
+
+## Käyttöliittymä
+
+Sovelluksen käytettävyys parantuisi heti, jos sen päivittäisi graafiseen käyttöliittymään. Tämä tulisikin pyrkiä tekemään versioon 2.0.
+
+Sovelluksesta puuttuu myös funktio, joka laskisi kunkin elokuvan saamat äänet ja esittäisi äänestystilanteen listana, josta näkisi äänten prosentuaalisen jakauman.
+
+
+
+
+## Tietojen tallennus
+
+Tiedot tallennetaan tällä hetkellä paikallisesti tekstitiedostoon, jonka seurauksena yksi äänestävä ryhmä voi äänestää vain yhdellä laitteella vuorotellen. Versioon 2.0. Tietojen tallennus tulisi siirtä pilveen ja siirtyä tekstitiedostoista tietokantatauluihin.
+
+Sovellus ei myöskään tallenna elokuvan äänestämisen yhteydessä äänestäjän käyttäjätunnusta, jonka seurauksena yksittäinen käyttäjä voi halutessaan äänestää monta kertaa.
+
+
+## Koodi
+
+Tämän ensimmäisen version koodissa on paljon turhaa toistoa. Sen sijaan, että jokaiselle luettavalle ja muokattavalle txt-tiedostolle on omat funktionsa päivitystä ja tyhjennystä varten, olisi järkevää tehdä kolme funktiota: yksi tiedoston lukemiseen, toinen tiedon lisäämiseen tiedoston loppuun ja kolmas päällekirjoittamiseen. Kukin funktio saisi parametrina muokkauksen kohteen ja tarvittaessa myös lisättävän/päällekirjoitettavan tiedon.
+
+Koodia kirjoitettaessa ei ole myöskään kiinnitetty huomiota funktioiden ja datan hakemisen nopeuteen, joka voisi nousta ongelmaksi jos äänestävä ryhmä on iso.
+
+Pylint antaa koodille varsin heikon arvosanan 5.12/10, joten parannettavaa löytyy. 
