@@ -12,9 +12,9 @@ Sovelluksella on kahdenlaisia käyttäjiä: peruskäyttäjä ja pääkäyttäjä
 
 ## Käyttöliittymäluonnos
 
-![](kayttoliittyma-luonnos-versio-1.png)
+Alkuperäisestä suunnitelmasta poiketen sovellukseen tuli graafisen käyttöliittymän sijaan tekstikäyttöliittymä. Kaavio alla pyrkii havainnollistamaan käyttöliittymän logiikkaa.
 
-Kuvasta poiketen sovellus toimii tekstikäyttäliittymällä, ei graafisella. Kuva kuitenkin havainnollistaa sovelluksen ominaisuuksia.
+![](https://github.com/KatjaKvintus/movie-voting-app/blob/master/dokumentaatio/Kuvat/K%C3%A4ytt%C3%B6liittym%C3%A4_final.JPG)
 
 Sovelluksen käynnistyessä käyttäjällä on neljä vaihtoehtoa:
 
@@ -22,15 +22,16 @@ Sovelluksen käynnistyessä käyttäjällä on neljä vaihtoehtoa:
 - Log in as returning user 
 - Log in as the admin user 
 - Close app
-  
+ 
 
-Käyttäjä valitsee sopivan vaihtoehdon antamalla sitä vastaavan kirjaimen []. Sovellus hyväksyy sekä ison että pienen kirjaimen. Sekä uusi käyttäjä
-että jo aiemmin tilin luonut käyttäjä pääsevät tunnus-salasana -vaiheen jälkeen äänestämään elokuvaa. 
+Käyttäjä valitsee sopivan vaihtoehdon antamalla sitä vastaavan kirjaimen []. Sovellus hyväksyy sekä ison että pienen kirjaimen. Sekä uusi käyttäjä että jo aiemmin tilin luonut käyttäjä pääsevät tunnus-salasana -vaiheen jälkeen äänestämään elokuvaa. 
 
 Admin-kirjautuminen antaa tarjolle admin-työkalut:
 - Print current voting list 
 - Clear voting list 
+- Read suggestions for next weeks movie voting
 - Set up a new votings list 
+- Make new admin user account
 - Exit admin tools 
 
 
