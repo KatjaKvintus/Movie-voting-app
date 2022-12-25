@@ -1,5 +1,5 @@
 # Movie voting app - leffaillan leffan äänestysappi
-Ohjelmistotekniikka, harjoitustyö
+Ohjelmistotekniikka, harjoitustyö syksy 2022
 
 Tällä sovelluksella voi ehdottaa elokuvaa ja äänestää valitusta listasta elokuvaa viikoittaista leffailtaa varten. Apin käyttöä varten tulee luoda käyttäjätili. Peruskäyttäjä voi katsoa elokuvalistan, äänestää elokuvaa ja ehdottaa haluamaansa elokuvaa seuraavaa äänestystä varten. Yksi tai useampi käyttäjä voi olla pääkäyttäjä, jolla on oikeus asettaa äänestettävät elokuvat, luoda uusia admin-käyttäjiä ja sulkea äänestys. 
 
@@ -24,6 +24,7 @@ python3 --version
 - [Testausdokumentti](https://github.com/KatjaKvintus/ot-harjoitustyo/blob/master/dokumentaatio/testaus.md)
 
 - [Tuntikirjanpito](https://github.com/KatjaKvintus/ot-harjoitustyo/blob/master/dokumentaatio/tuntikirjanpito.md)
+
 
 ### Release
 
