@@ -2,7 +2,7 @@ import unittest
 from entities.Movie import Movie
 
 
-class TestMovie(unittest.TestCase):
+class Test_Movie(unittest.TestCase):
 
 
     def test_movie_to_string_works_correctly(self):

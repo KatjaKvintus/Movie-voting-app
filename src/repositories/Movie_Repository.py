@@ -72,7 +72,7 @@ class Movie_Repository:
         """
         Movie_Repository.list_of_movies_to_be_voted.clear()
         open("src/repositories/voting_list.txt", 'w', encoding="utf-8").close()
-        print ("Voting list is now empty.\n")
+        return "Voting list is now empty.\n"
 
 
     def empty_suggestion_list():

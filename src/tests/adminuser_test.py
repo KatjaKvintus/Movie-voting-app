@@ -1,8 +1,8 @@
 import unittest
-from entities.AdminUser import Admin_user
+from entities.Admin_User import Admin_user
 
 
-class TestAdminUser(unittest.TestCase):
+class Test_Admin_User(unittest.TestCase):
 
 
     def test_you_can_create_new_admin_user(self):

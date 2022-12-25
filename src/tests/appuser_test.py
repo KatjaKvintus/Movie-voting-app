@@ -1,8 +1,8 @@
 import unittest
-from entities.AppUser import App_User
+from entities.App_User import App_User
 
 
-class TestAppUser(unittest.TestCase):
+class Test_App_User(unittest.TestCase):
 
 
     def setUp(self):
