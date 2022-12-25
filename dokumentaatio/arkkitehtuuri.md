@@ -103,10 +103,14 @@ Pääkäyttäjä kirjautuu sovelluksen aloitustavalikosta pääkäyttäjänä (k
 
 ### Elokuvan äänestäminen
 
+Käyttäjä saapuu toimintovalikkoon (movie menu) ja jos äänestys on auki, sovellus tarjoaa mahdollisuutta äänestää. Käyttäjä valitsee toimintovalikosta toiminnon "Vote for a movie", jonka jälkeen sovellus näyttää numeroidun listanelokuvista. Käyttäjä valitsee haluamansa elokuvan antamalla syötteenä elokuvan numeron. Sovellus tallentaa äänen tiedostoon.
+
 ![](https://github.com/KatjaKvintus/ot-harjoitustyo/blob/master/dokumentaatio/Kuvat/sekvenssikaavio_Voting%20for%20a%20movie.jpg)
 
 
 ### Elokuvan ehdottaminen seuraavaa äänestystä varten
+
+Käyttäjä saapuu toimintovalikkoon (movie menu) ja valitsee toimintovalikosta toiminnon "Suggest a movie", jonka jälkeen sovellus pyytää syötteenä elokuvan nimen ja julkaisuvuoden. Sovellus tallentaa ehdotuksen tiedostoon.
 
 ![](https://github.com/KatjaKvintus/ot-harjoitustyo/blob/master/dokumentaatio/Kuvat/sekvenssikaavio_Suggesting%20a%20movie.jpg)
 
