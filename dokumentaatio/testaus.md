@@ -21,9 +21,10 @@ Testauksesta vastaavat luokat on nimetty testauksen kohteena olevien luokkien mu
 
 ### Testauskattavuus
 
-Käyttöliittymäkerrosta lukuunottamatta sovelluksen testauksen haarautumakattavuus on 23 %.
+Sovelluksen testauksen haarautumakattavuus on 23 %.
 
 ![](https://github.com/KatjaKvintus/movie-voting-app/blob/master/dokumentaatio/Kuvat/Coverage%20report%202022-12-25.png)
+
 
 ## Järjestelmätestaus
 
@@ -39,6 +40,7 @@ Sovellus on kirjoitettu laitoksen fuksilaitteella, jonka käyttöjärjestelmän�
 
 Kaikki määrittelydokumentin ja käyttöohjeen listaamat toiminnallisuudet on käyty läpi ja testattu. Kaikkia niitä toiminnallisuuksia, joissa käyttäjältä pyydetään syötettä, on myös testattu virheellisillä syötteillä, kuten tyhjällä syötteellä, virheellisistä arvoista koostuvalla syötteellä sekä erikoismerkeistä koostuvilla syötteillä. 
 
+
 ## Sovellukseen jääneet laatuongelmat
 
 Sovellus antaa käyttäjän kirjautumisen yhteydessä satunnaisesti seuraavan virheilmoituksen:
@@ -47,5 +49,5 @@ Sovellus antaa käyttäjän kirjautumisen yhteydessä satunnaisesti seuraavan vi
 UnicodeDecodeError: 'utf-8' codec can't decode byte 0xc3 in position 0: invalid continuation byte
 ```
 
-Virheilmoituksen juurisyytä ei ole pystytty selvittämään. On mahdollista, että virhe johtuu laitteessa käytetystä vanhentuneesta käyttöjätjestelmästä, jota koodari ei taikauskoisesti ole uskaltanut päivittää uudeksi ennen harjoitustyön palautusta. 
+Virheilmoituksen juurisyytä ei ole pystytty selvittämään. On mahdollista, että virhe johtuu laitteessa käytetystä vanhentuneesta käyttöjärjestelmästä, jota koodari ei taikauskoisena uskaltanut päivittää ennen tämän harjoitustyön palautusta. 
 
