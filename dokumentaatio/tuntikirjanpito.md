@@ -23,9 +23,7 @@
 | 21.12. | 6 | Sekvensikaavioiden korjauksia, pylint-taskin korjaus, koodin muotoilua pylint-raportin perusteella, testien kirjoitusta, luokkakaavion piirto uusiksi | 
 | 22.12. | 6 | Virheiden korjauksia, sekvenssikaavioiden päivitystä, testausta, muutama metodi lisää |
 | 23.12. | 5 | Virheiden korjauksia, docstringsin kirjoitusta, testausta, dokumentaation hiontaa |
-| 25.12. | 6 |  |
-|  |  |  |
-|  |  |  |
-|  |  |  |
+| 25.12. | 7 | Virheiden korjauksia, testausta, dokumentaation päivitys, testausdokumentin kirjoitus |
 
-| yht  79.5  h |   | | 
+
+| yht  80.5  h |   | | 
