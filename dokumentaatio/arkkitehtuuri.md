@@ -14,7 +14,7 @@ Pakkaus
 
 ### Luokkakaavio:
 
-![](https://github.com/KatjaKvintus/ot-harjoitustyo/blob/master/dokumentaatio/Kuvat/luokkakaavio.jpg)
+![]()
 
 Ohjelman suoritys käynnistyy hakemiston juuressa olevasta tiedostosta index.py. Muu koodi on jaettu seuraaviin kokonaisuuksiin:
 - entities (luokat AppUser, AdminUser ja Movie: uusien olioiden luominen)
