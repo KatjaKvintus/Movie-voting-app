@@ -24,7 +24,7 @@ Sovelluksen käynnistyessä käyttäjällä on neljä vaihtoehtoa:
 - Close app
  
 
-Käyttäjä valitsee sopivan vaihtoehdon antamalla sitä vastaavan kirjaimen []. Sovellus hyväksyy sekä ison että pienen kirjaimen. Sekä uusi käyttäjä että jo aiemmin tilin luonut käyttäjä pääsevät tunnus-salasana -vaiheen jälkeen äänestämään elokuvaa. 
+Käyttäjä valitsee sopivan vaihtoehdon antamalla sitä vastaavan kirjaimen. Sovellus hyväksyy sekä ison että pienen kirjaimen. Sekä uusi käyttäjä että jo aiemmin tilin luonut käyttäjä pääsevät tunnus-salasana -vaiheen jälkeen äänestämään elokuvaa. 
 
 Admin-kirjautuminen antaa tarjolle admin-työkalut:
 - Print current voting list 
@@ -58,7 +58,7 @@ Käyttäjä:
 Admin:
   - Voi tyhjentää elokuvalistan - TEHTY
   - Voi asettaa uuden äänestyslistan - TEHTY
-  - Voi julkaista äänestyksen voittaneen elokuvan
+  - Voi julkaista äänestyksen voittaneen elokuvan - TEHTY
   - voi hyväksyä käyttäjän elokuvaehdotuksen osaksi seuraavaa äänestyslistaa - TEHTY
 
 
@@ -72,4 +72,5 @@ Perusversion jälkeen sovellukseen voisi lisätä mm. seuraavat ominaisuudet
 - Tilasto aiemmista äänestyksistä
 - Mahdollisuus poistaa käyttäjätunnus (joko itse tai sitten pääkäyttäjä heittää käyttäjän ulos)
 - Äänestystilanteen laskemismetodin jatkojalostus niin, että se tunnistaa tasapelitilanteet
+- Tietojen pysyväistallennus pilveen niin, että sovellusta voisi käyttää useammalta laitteelta
 
