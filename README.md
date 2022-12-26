@@ -3,6 +3,9 @@ Ohjelmistotekniikka, harjoitustyö (syksy 2022)
 
 Tällä sovelluksella voi ehdottaa elokuvaa ja äänestää valitusta listasta elokuvaa viikoittaista leffailtaa varten. Apin käyttöä varten tulee luoda käyttäjätili. Peruskäyttäjä voi katsoa elokuvalistan, äänestää elokuvaa ja ehdottaa haluamaansa elokuvaa seuraavaa äänestystä varten. Yksi tai useampi käyttäjä voi olla pääkäyttäjä, jolla on oikeus asettaa äänestettävät elokuvat, luoda uusia admin-käyttäjiä ja sulkea äänestys. 
 
+**DL:n jälkeinen huomio: releaseen unohtui testidataa dataa tallentaviin dokumentteihin. Sovellusta kannattaa testata niin, että kirjautuu ensin admin-käyttäjänä (käyttäjätunnus: admin, salasana: supersecretpassword) ja luo uuden elokuvalistan äänestystä varten.**
+
+
 
 ## Python-versio
 
