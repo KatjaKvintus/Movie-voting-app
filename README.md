@@ -1,10 +1,15 @@
 # Movie voting app - leffaillan leffan äänestysappi
-Ohjelmistotekniikka, harjoitustyö (syksy 2022)
+_TKT20002 Ohjelmistotekniikka, harjoitustyö (Helsingin yliopisto, tietojenkäsittelytieteen laitos, syksy 2022)_
 
-Tällä sovelluksella voi ehdottaa elokuvaa ja äänestää valitusta listasta elokuvaa viikoittaista leffailtaa varten. Apin käyttöä varten tulee luoda käyttäjätili. Peruskäyttäjä voi katsoa elokuvalistan, äänestää elokuvaa ja ehdottaa haluamaansa elokuvaa seuraavaa äänestystä varten. Yksi tai useampi käyttäjä voi olla pääkäyttäjä, jolla on oikeus asettaa äänestettävät elokuvat, luoda uusia admin-käyttäjiä ja sulkea äänestys. 
+Tällä sovelluksella käyttäjä voi äänestää valitusta listasta elokuvaa viikoittaista leffailtaa varten sekä ehdottaa elokuvaa seuraavaan äänestykseen. Sovelluksen käyttöä varten tulee luoda käyttäjätili. Peruskäyttäjä voi katsoa elokuvalistan, äänestää elokuvaa ja ehdottaa haluamaansa elokuvaa seuraavaa äänestystä varten. Yksi tai useampi käyttäjä voi olla pääkäyttäjä, jolla on oikeus asettaa äänestettävät elokuvat, luoda uusia admin-käyttäjiä ja sulkea äänestys. 
 
-**DL:n jälkeinen huomio: releaseen unohtui testidataa dataa tallentaviin dokumentteihin. Sovellusta kannattaa testata niin, että kirjautuu ensin admin-käyttäjänä (käyttäjätunnus: admin, salasana: supersecretpassword) ja luo uuden elokuvalistan äänestystä varten.**
 
+## Huomioita sovelluksesta
+
+Tämä on ensimmäinen tekemäni harjoitustyö ja siinä on kolme perustavanlaatuista ongelmaa:
+- Tiedot tallennetaan paikallisesti eli sovellusta käyttävä ryhmä joutuu käyttämään sitä yhdeltä tietokoneelta
+- Sovelluksesta puuttuu toiminto, jolla luodaan admin-käyttäjä. Ensimmäinen pääkäyttäjä joutuu aloittamaan käytön valmiiksi luoduilla tunnuksilla (käyttäjätunnus: admin, salasana: supersecretpassword).
+- Sovellukselle kirjoitetut testit ovat puutteellisia ja kattavat vain 23 % tämänhetkisestä koodista
 
 
 ## Python-versio
@@ -25,7 +30,6 @@ python3 --version
 - [Changelog](https://github.com/KatjaKvintus/ot-harjoitustyo/blob/master/dokumentaatio/changelog.md)
 - [Arkkitehtuurikuvaus](https://github.com/KatjaKvintus/ot-harjoitustyo/blob/master/dokumentaatio/arkkitehtuuri.md)
 - [Testausdokumentti](https://github.com/KatjaKvintus/ot-harjoitustyo/blob/master/dokumentaatio/testaus.md)
-
 - [Tuntikirjanpito](https://github.com/KatjaKvintus/ot-harjoitustyo/blob/master/dokumentaatio/tuntikirjanpito.md)
 
 
