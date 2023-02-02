@@ -1,14 +1,15 @@
 # Movie voting app - leffaillan leffan äänestysappi
 _TKT20002 Ohjelmistotekniikka, harjoitustyö (Helsingin yliopisto, tietojenkäsittelytieteen laitos, syksy 2022)_
 
-Tällä sovelluksella käyttäjä voi äänestää valitusta listasta elokuvaa viikoittaista leffailtaa varten sekä ehdottaa elokuvaa seuraavaan äänestykseen. Sovelluksen käyttöä varten tulee luoda käyttäjätili. Peruskäyttäjä voi katsoa elokuvalistan, äänestää elokuvaa ja ehdottaa haluamaansa elokuvaa seuraavaa äänestystä varten. Yksi tai useampi käyttäjä voi olla pääkäyttäjä, jolla on oikeus asettaa äänestettävät elokuvat, luoda uusia admin-käyttäjiä ja sulkea äänestys. 
+Sovelluksen käyttöä varten tulee luoda käyttäjätili. Peruskäyttäjä voi katsoa elokuvalistan, äänestää elokuvaa ja ehdottaa haluamaansa elokuvaa seuraavaa äänestystä varten. Yksi tai useampi käyttäjä voi olla pääkäyttäjä, jolla on oikeus asettaa äänestettävät elokuvat, luoda uusia admin-käyttäjiä ja sulkea äänestys. 
 
 
 ## Huomioita sovelluksesta
 
-Tämä on ensimmäinen tekemäni harjoitustyö ja siinä on kolme perustavanlaatuista ongelmaa:
-- Tiedot tallennetaan paikallisesti eli sovellusta käyttävä ryhmä joutuu käyttämään sitä yhdeltä tietokoneelta
+Tämä on ensimmäinen tekemäni harjoitustyö ja siinä on useita perustavanlaatuisia ongelmia:
+- Tiedot tallennetaan paikallisesti, eli sovellusta käyttävä ryhmä joutuu käyttämään sitä yhdeltä tietokoneelta
 - Sovelluksesta puuttuu toiminto, jolla luodaan admin-käyttäjä. Ensimmäinen pääkäyttäjä joutuu aloittamaan käytön valmiiksi luoduilla tunnuksilla (käyttäjätunnus: admin, salasana: supersecretpassword).
+- Koodissa on liikaa toisteisuutta (mm. useita eri funktioita tiedon tallentamiseen tiedostoon, kun järkevämpää olisi yksi funktio, joka saisi parametreina tiedoston johon kirjoitetaan, kirjoitettavan datan sekä tiedon siitä, ylikirjoitetaanko data vai lisätäänkö tiedostossa jo olevan datan jatkeeksi). 
 - Sovellukselle kirjoitetut testit ovat puutteellisia ja kattavat vain 23 % tämänhetkisestä koodista
 
 
