@@ -6,11 +6,11 @@ Sovelluksen käyttöä varten tulee luoda käyttäjätili. Peruskäyttäjä voi 
 
 ## Huomioita sovelluksesta
 
-Tämä on ensimmäinen tekemäni harjoitustyö ja siinä on useita perustavanlaatuisia ongelmia:
+Tämä on ensimmäinen tekemäni harjoitustyö ja siinä on useita perustavanlaatuisia ongelmia, mm seuraavat:
 - Tiedot tallennetaan paikallisesti, eli sovellusta käyttävä ryhmä joutuu käyttämään sitä yhdeltä tietokoneelta
 - Sovelluksesta puuttuu toiminto, jolla luodaan admin-käyttäjä. Ensimmäinen pääkäyttäjä joutuu aloittamaan käytön valmiiksi luoduilla tunnuksilla (käyttäjätunnus: admin, salasana: supersecretpassword).
 - Koodissa on liikaa toisteisuutta (mm. useita eri funktioita tiedon tallentamiseen tiedostoon, kun järkevämpää olisi yksi funktio, joka saisi parametreina tiedoston johon kirjoitetaan, kirjoitettavan datan sekä tiedon siitä, ylikirjoitetaanko data vai lisätäänkö tiedostossa jo olevan datan jatkeeksi). 
-- Sovellukselle kirjoitetut testit ovat puutteellisia ja kattavat vain 23 % tämänhetkisestä koodista
+- Sovellukselle kirjoitetut testit ovat puutteellisia ja kattavat vain 23 % koodista
 
 
 ## Python-versio
